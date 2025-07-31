@@ -1,31 +1,38 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Nosotros | Cold Hielo</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 
 <body>
   <div class="hero">
     <header class="container-fluid py-2" style="background-color: #FCCE3D;">
-      <div class="d-flex flex-wrap align-items-center justify-content-between px-3">
+      <div class="d-flex flex-wrap align-items-center justify-content-between px-3 w-100">
 
         <!-- Logo -->
         <div class="logo-header">
           <img src="img/logo-coldhielo-optimizado.png" alt="Cold Hielo Logo"
-          style="max-width: 200px; border-radius: 3vw;">
+            style="max-width: 200px; border-radius: 3vw;">
         </div>
 
         <!-- Menú de navegación -->
         <div class="d-flex align-items-end pt-4">
+          <div class="menu-toggle d-md-none">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+
           <nav class="main-nav">
             <ul id="mainMenu" class="nav">
-              <li class="nav-item"><a class="nav-links" href="index.html">Inicio</a></li>
-              <li class="nav-item"><a class="nav-links active" href="nosotros.html">Nosotros</a></li>
+              <li class="nav-item"><a class="nav-links active" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-links" href="nosotros.html">Nosotros</a></li>
               <li class="nav-item"><a class="nav-links" href="productos.html">Productos</a></li>
               <li class="nav-item"><a class="nav-links" href="servicios.html">Servicios</a></li>
               <li class="nav-item"><a class="nav-links" href="contacto.html">Contacto</a></li>
@@ -35,44 +42,33 @@
 
       </div>
     </header>
-
-  <section class="banner-index position-relative">
-      <img src="img/banner-index-2.png" alt="Banner Cold Hielo" class="img-fluid w-100">
-      <div class="banner-index-texto position-absolute top-50 start-50 translate-middle text-center text-white">
-        <h1 class="display-5 fw-bold" style="font-size: 1.5em; color: whitesmoke;">Somos Cold Hielo</h1>
-          <p class="display-5 fw-bold" style="font-size: 1em; color: whitesmoke;">Una empresa familiar con raíces en Ramos Mejía, al servicio del AMBA</p>
+    <section class="banner-index position-relative">
+      <img alt="Banner Cold Hielo" class="img-fluid w-100" src="img/banner-index-2.png" />
+      <div class="banner-nosotros-texto position-absolute top-50 start-50 translate-middle text-center text-white">
+        <h1 class="display-5 fw-bold banner-title">Somos Cold Hielo</h1>
+        <!-- <p class="display-5 fw-bold banner-subtitle">Una empresa familiar con raíces en Ramos Mejía, al servicio del
+          AMBA</p> -->
       </div>
     </section>
-
-    <!-- <section class="inner">
-      <h1>Somos Cold Hielo</h1>
-      <p>Una empresa familiar con raíces en Ramos Mejía, al servicio del AMBA</p>
-    </section> -->
-
     <section class="inner">
       <h2>Nuestra historia</h2>
       <p>Cold Hielo nació como un emprendimiento familiar con el objetivo de brindar soluciones prácticas y confiables
-        en
-        la venta de hielo y alquiler de freezers. Con el paso del tiempo, nos consolidamos como una referencia en la
-        zona
-        por nuestra seriedad y calidad.</p>
+        en la venta de hielo y alquiler de freezers. Con el paso del tiempo, nos consolidamos como una referencia en la
+        zona por nuestra seriedad y calidad.</p>
     </section>
-
     <section class="inner">
       <h2>Compromiso y atención</h2>
       <p>Nos caracteriza la atención personalizada, la puntualidad en las entregas y la calidad constante en todos
         nuestros productos. Cada pedido se trata con responsabilidad, porque sabemos lo importante que es cumplir.</p>
     </section>
-
-    <section class="inner"> 
+    <section class="inner">
       <h2>Zona de cobertura</h2>
       <p>Atendemos todo el AMBA con reparto a domicilio y venta directa desde nuestra fábrica en <strong>Prudan 119,
-          Ramos
-          Mejía</strong>. Estamos disponibles para clientes particulares, comercios y eventos.</p>
+          Ramos Mejía</strong>. Estamos disponibles para clientes particulares, comercios y eventos.</p>
     </section>
     <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/541133002956" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-      <img src="img/icon-whatsapp.png" alt="WhatsApp">
+    <a aria-label="WhatsApp" class="whatsapp-float" href="https://wa.me/541133002956" target="_blank">
+      <img alt="WhatsApp" src="img/icon-whatsapp.png" />
     </a>
     <footer>
       <div class="footer-content-grid">
@@ -84,22 +80,33 @@
           <p>🏭 Retiro en fábrica: 8 a 14 y 17 a 22 hs (Lun a Sáb)</p>
           <div class="social-icons">
             <a href="https://www.instagram.com/tuusuario" target="_blank">
-              <img src="img/icon-insta.jpg" alt="Instagram" />
-            </a>
+              <img alt="Instagram" src="img/icon-insta.jpg">
+              </img></a>
             <a href="https://www.facebook.com/tuusuario" target="_blank">
-              <img src="img/icon-face.png" alt="Facebook" />
-            </a>
+              <img alt="Facebook" src="img/icon-face.png">
+              </img></a>
           </div>
         </div>
         <div class="footer-copy">
-          <p>&copy; 2025 Cold Hielo - Todos los derechos reservados</p>
+          <p>© 2025 Cold Hielo - Todos los derechos reservados</p>
         </div>
       </div>
     </footer>
   </div>
   <!-- Bootstrap 5 JS Bundle con Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script> 
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('mainMenu');
 
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+      });
+    }
+  });
+</script>
 </body>
 
 </html>

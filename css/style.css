@@ -23,6 +23,27 @@ header {
   height: 60px;
 }
 
+.banner-title {
+  color: whitesmoke;
+  font-size: 2rem;
+  white-space: nowrap;
+  text-wrap: nowrap;
+}
+
+.banner-subtitle {
+  font-size: 1em;
+  color: whitesmoke;
+  white-space: normal;
+  margin-top: 0.5rem;
+}
+
+.banner-nosotros-texto {
+  width: 100%;
+  max-width: 90%;
+  padding: 0 1rem;
+  text-align: center;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -109,6 +130,7 @@ nav ul {
 }
 
 .banner-index-texto,
+.banner-nosotros-texto,
 .banner-texto {
   color: white;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
@@ -389,19 +411,32 @@ footer {
     z-index: 10;
   }
 
+  .banner-title {
+    font-size: 2.5rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1.25rem;
+  }
+
   .banner-index,
   .banner-hielo,
   .banner-comercio {
     height: 220px;
+    width: 100%;
   }
 
   .banner-index-texto h1,
   .banner-texto h1 {
-    font-size: 1.6rem;
+    font-size: 2.5rem !important;
+  }
+
+  .banner-nosotros-texto h1 {
+    font-size: 1.5rem !important;
   }
 
   .banner-texto p {
-    font-size: 0.95rem;
+    font-size: 0.5rem !important;
   }
 
   section {
@@ -481,4 +516,5 @@ footer {
     width: 240px;
     height: 160px;
   }
+
 }
