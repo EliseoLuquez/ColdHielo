@@ -3,12 +3,18 @@
   --accent: #00bcd4;
   --dark: #111;
   --text: #222;
+  --white: #fff;
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.18);
+  --radius: 16px;
 }
 
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
+  color: var(--text);
+  background-color: #f8f9fa;
 }
 
 header {
@@ -39,9 +45,26 @@ header {
 
 .banner-nosotros-texto {
   width: 100%;
-  max-width: 90%;
-  padding: 0 1rem;
+  max-width: 900px;
+  padding: 1.5rem 2rem;
   text-align: center;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.42);
+  border-radius: 18px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.banner-nosotros-texto h1,
+.banner-nosotros-texto p {
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+.banner-nosotros-texto p {
+  font-weight: 500;
+  margin-bottom: 1.25rem;
 }
 
 nav ul {
@@ -67,7 +90,6 @@ nav ul {
   margin-left: auto;
 }
 
-
 .main-nav .nav-links.active,
 .main-nav .nav-links:hover {
   background-color: white;
@@ -90,8 +112,8 @@ nav ul {
 }
 
 .whatsapp-float img {
-  width: 45px;
-  height: 45px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
 }
 
@@ -106,18 +128,28 @@ nav ul {
 }
 
 .inner {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  padding: 1rem .5rem;
+  padding: 3rem 1rem;
 }
 
 .banner-index,
 .banner-hielo,
 .banner-comercio {
   width: 100%;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
   position: relative;
+}
+
+.banner-index::before,
+.banner-hielo::before,
+.banner-comercio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
 .banner-index img,
@@ -133,9 +165,24 @@ nav ul {
 .banner-nosotros-texto,
 .banner-texto {
   color: white;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
   padding: 1rem;
   font-size: 1.25rem;
+}
+
+.banner-nosotros-texto h1,
+.banner-index-texto h1,
+.banner-texto h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.banner-nosotros-texto p,
+.banner-index-texto p,
+.banner-texto p {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  margin-bottom: 1.25rem;
 }
 
 section {
@@ -143,20 +190,27 @@ section {
 }
 
 section h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--accent);
   text-align: center;
+  font-weight: 700;
+}
+
+section p {
+  font-size: 1.05rem;
 }
 
 .equipo-item {
   background-color: #fff;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
 }
 
 .equipo-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-medium);
 }
 
 .equipo-item img {
@@ -196,39 +250,75 @@ ul {
 }
 
 .servicio-item {
-  flex: 0 1 280px;
+  flex: 0 1 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   text-align: center;
+  background: #fff;
+  padding: 1.5rem 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.servicio-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
 }
 
 .servicio-item img {
   width: 100%;
-  max-width: 240px;
-  height: auto;
+  max-width: 220px;
+  height: 180px;
   object-fit: contain;
   border-radius: 8px;
 }
 
 .servicio-item p {
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.servicio-item strong {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  color: var(--dark);
 }
 
 .servicios-lista.vertical a.servicio-item {
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s ease;
 }
 
-.servicios-lista.vertical a.servicio-item:hover {
-  transform: scale(1.02);
+#ideal-para .border,
+#beneficios .border {
+  border: none !important;
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius) !important;
+}
+
+#cta-principal {
+  background: linear-gradient(135deg, rgba(252, 206, 61, 0.18), rgba(0, 188, 212, 0.12));
+  border-radius: 24px;
+  padding: 3rem 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+#cta-principal h2 {
+  margin-bottom: 0.75rem;
+}
+
+#cta-principal p {
+  max-width: 760px;
+  margin: 0 auto 1.5rem auto;
 }
 
 #clientes {
-  padding: 1rem .5rem;
+  padding: 2rem 1rem 3rem;
   text-align: center;
   overflow-x: auto;
 }
@@ -310,8 +400,8 @@ ul {
 
 footer {
   background-color: var(--primary);
-  padding: 1rem 2rem;
-  font-size: 0.9rem;
+  padding: 1.5rem 2rem;
+  font-size: 0.95rem;
   margin-top: 0;
 }
 
@@ -328,7 +418,7 @@ footer {
 .footer-copy {
   flex: 1 1 300px;
   color: var(--dark);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .footer-contacto a {
@@ -405,52 +495,321 @@ footer {
   border-radius: 2px;
 }
 
+.servicio-hero {
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+}
+
+.servicio-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.servicio-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.servicio-hero-texto {
+  width: 100%;
+  max-width: 900px;
+  padding: 1.5rem 2rem;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.42);
+  border-radius: 18px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.servicio-hero-texto h1,
+.servicio-hero-texto p {
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+.servicio-hero-texto h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.servicio-hero-texto p {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.servicio-beneficio-card,
+.servicio-uso-card,
+.paso-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1rem;
+}
+
+.servicio-beneficio-card h3 {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.servicio-uso-card p {
+  font-weight: 600;
+  margin: 0;
+}
+
+.paso-numero {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+#cta-servicios-final {
+  background: linear-gradient(135deg, rgba(252, 206, 61, 0.18), rgba(0, 188, 212, 0.12));
+  border-radius: 24px;
+  padding: 3rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.producto-hero {
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+}
+
+.producto-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.producto-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.producto-hero-texto {
+  width: 100%;
+  max-width: 900px;
+  padding: 1.5rem 2rem;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.42);
+  border-radius: 18px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.producto-hero-texto h1,
+.producto-hero-texto p {
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+.producto-hero-texto h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.producto-hero-texto p {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.producto-beneficio-card,
+.producto-info-card,
+.producto-uso-card,
+.tipo-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem 1rem;
+}
+
+.producto-beneficio-card h3,
+.producto-info-card h3 {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.producto-uso-card p {
+  font-weight: 600;
+  margin: 0;
+}
+
+.tipo-card {
+  padding: 1.5rem 1rem;
+}
+
+#cta-productos-final {
+  background: linear-gradient(135deg, rgba(252, 206, 61, 0.18), rgba(0, 188, 212, 0.12));
+  border-radius: 24px;
+  padding: 3rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contacto-hero {
+  padding: 4rem 1rem 2rem;
+}
+
+.contacto-hero h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.contacto-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  padding: 2rem 1.5rem;
+  height: 100%;
+}
+
+.contacto-card h2 {
+  margin-bottom: 1rem;
+}
+
+.contacto-card p {
+  margin-bottom: 0.85rem;
+}
+
+.contacto-card a {
+  word-break: break-word;
+}
+
+.contacto-lista {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.contacto-lista li {
+  margin-bottom: 0.4rem;
+}
+
+#cta-contacto-final {
+  background: linear-gradient(135deg, rgba(252, 206, 61, 0.18), rgba(0, 188, 212, 0.12));
+  border-radius: 24px;
+  padding: 3rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.nosotros-card,
+.nosotros-info-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  padding: 1.5rem 1rem;
+}
+
+.nosotros-card h3,
+.nosotros-info-card h3 {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+#cta-nosotros-final {
+  background: linear-gradient(135deg, rgba(252, 206, 61, 0.18), rgba(0, 188, 212, 0.12));
+  border-radius: 24px;
+  padding: 3rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#eventos-nosotros {
+  margin-top: 1rem;
+}
+
+.eventos-galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.evento-foto {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.evento-foto img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.evento-foto:hover img {
+  transform: scale(1.03);
+}
+
 @media (max-width: 768px) {
   header {
     position: relative;
     z-index: 10;
-  }
-
-  .banner-title {
-    font-size: 2.5rem;
-  }
-
-  .banner-subtitle {
-    font-size: 1.25rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   .banner-index,
   .banner-hielo,
   .banner-comercio {
-    height: 220px;
+    height: 420px;
     width: 100%;
   }
 
+  .banner-nosotros-texto {
+    max-width: 95%;
+    padding: 1rem;
+  }
+
   .banner-index-texto h1,
-  .banner-texto h1 {
-    font-size: 2.5rem !important;
-  }
-
+  .banner-texto h1,
   .banner-nosotros-texto h1 {
-    font-size: 1.5rem !important;
+    font-size: 1.9rem !important;
+    line-height: 1.2;
   }
 
-  .banner-texto p {
-    font-size: 0.5rem !important;
+  .banner-index-texto p,
+  .banner-texto p,
+  .banner-nosotros-texto p {
+    font-size: 1rem !important;
+    line-height: 1.4;
   }
 
   section {
     padding: 2rem 1rem;
   }
 
-
   #nosotros p {
     text-align: center;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: center;
   }
 
   nav ul {
@@ -478,7 +837,7 @@ footer {
   }
 
   .main-nav .nav-links {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     display: block;
     width: 100%;
     text-align: left;
@@ -488,7 +847,6 @@ footer {
     border-bottom: 2px solid #00bcd4;
   }
 
-  /* Quitamos la línea del último item */
   .main-nav ul.active li:last-child {
     border-bottom: none;
     margin-bottom: 0;
@@ -496,6 +854,16 @@ footer {
 
   .menu-toggle {
     display: flex;
+  }
+
+  .servicio-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .servicio-item img {
+    max-width: 180px;
+    height: 150px;
   }
 
   .footer-content-grid {
@@ -517,4 +885,65 @@ footer {
     height: 160px;
   }
 
+  .whatsapp-float {
+    width: 56px;
+    height: 56px;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .whatsapp-float img {
+    width: 48px;
+    height: 48px;
+  }
+
+  #cta-principal {
+    padding: 2rem 1rem;
+  }
+
+    .producto-hero {
+    height: 430px;
+  }
+
+  .producto-hero-texto {
+    max-width: 94%;
+    padding: 1rem;
+  }
+
+  .producto-hero-texto h1 {
+    font-size: 1.9rem;
+  }
+
+  .producto-hero-texto p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  #cta-productos-final {
+    padding: 2rem 1rem;
+  }
+
+    .contacto-hero {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .contacto-card {
+    padding: 1.5rem 1rem;
+  }
+
+  #cta-contacto-final {
+    padding: 2rem 1rem;
+  }
+  
+    #cta-nosotros-final {
+    padding: 2rem 1rem;
+  }
+
+    .eventos-galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .evento-foto img {
+    height: 220px;
+  }
 }
