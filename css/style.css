@@ -118,7 +118,7 @@ nav ul {
 }
 
 .hero {
-  background: url('../img/background-pattern.png') center/200px repeat;
+  background: #f5f9fb;
 }
 
 .hero h1 {
@@ -131,6 +131,26 @@ nav ul {
   max-width: 1100px;
   margin: auto;
   padding: 3rem 1rem;
+}
+
+#beneficios-alquiler,
+#equipos-destacados,
+#ideal-para,
+#como-funciona-home,
+#hielo-complemento,
+#confianza {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+#beneficios-alquiler,
+#como-funciona-home,
+#confianza {
+  max-width: 1180px;
+}
+
+#equipos-destacados {
+  max-width: 1040px;
 }
 
 .banner-index,
@@ -251,7 +271,8 @@ section p {
 
 .equipment-card img {
   width: 100%;
-  height: 170px;
+  max-width: 260px;
+  height: 180px;
   object-fit: contain;
   margin-bottom: 1rem;
 }

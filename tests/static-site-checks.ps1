@@ -27,6 +27,7 @@ $rentalQuery = "https://wa.me/541133002956?text=Hola%2C%20quiero%20consultar%20p
 $iceQuery = "https://wa.me/541133002956?text=Hola%2C%20quiero%20consultar%20por%20compra%20de%20hielo."
 
 Assert-Contains $index "Alquiler de Freezers y Heladeras | Cold Hielo Ramos Mejia" "home title"
+Assert-Contains $index "css/style.css?v=20260609-2" "home cache-busted stylesheet"
 Assert-Contains $index "Consultar alquiler" "home primary CTA"
 Assert-Contains $index "Equipos destacados" "home equipment section"
 Assert-Contains $index "Como funciona" "home process section"
@@ -51,5 +52,8 @@ Assert-Contains $css ".equipment-card" "equipment card styles"
 Assert-Contains $css ".feature-card" "feature card styles"
 Assert-Contains $css ".process-card" "process card styles"
 Assert-Contains $css ".logo-header img" "mobile logo styles"
+Assert-Contains $css ".hero {" "site wrapper styles"
+Assert-Contains $css "background: #f5f9fb;" "clean site background"
+Assert-NotContains $css ".hero {`r`n  background: url('../img/background-pattern.png')" "global patterned background"
 
 Write-Host "Static site checks passed."
