@@ -271,8 +271,8 @@ section p {
 
 .equipment-card img {
   width: 100%;
-  max-width: 260px;
-  height: 180px;
+  max-width: 280px;
+  height: 210px;
   object-fit: contain;
   margin-bottom: 1rem;
 }

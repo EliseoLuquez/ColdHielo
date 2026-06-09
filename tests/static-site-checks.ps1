@@ -30,6 +30,11 @@ Assert-Contains $index "Alquiler de Freezers y Heladeras | Cold Hielo Ramos Meji
 Assert-Contains $index "css/style.css?v=20260609-2" "home cache-busted stylesheet"
 Assert-Contains $index "Consultar alquiler" "home primary CTA"
 Assert-Contains $index "Equipos destacados" "home equipment section"
+Assert-Contains $index "img/catalogo-freezer-horizontal.jpg" "home catalog horizontal freezer image"
+Assert-Contains $index "img/catalogo-freezer-vertical.jpg" "home catalog vertical freezer image"
+Assert-Contains $index "img/catalogo-heladera-exhibidora.jpg" "home catalog display fridge image"
+Assert-Contains $index "img/catalogo-heladera-comun.jpg" "home catalog standard fridge image"
+Assert-Contains $index "img/catalogo-frigobar.jpg" "home catalog mini fridge image"
 Assert-Contains $index "Como funciona" "home process section"
 Assert-Contains $index "Hielo para acompanar" "home ice complement section"
 Assert-Contains $index $rentalQuery "home rental WhatsApp query"
@@ -39,6 +44,11 @@ Assert-Contains $servicios "freezer%20vertical" "service freezer vertical query"
 Assert-Contains $servicios "heladera%20exhibidora" "service exhibitor fridge query"
 Assert-Contains $servicios "heladera%20comun" "service standard fridge query"
 Assert-Contains $servicios "frigobar" "service frigobar query"
+Assert-Contains $servicios "img/catalogo-freezer-horizontal.jpg" "service catalog horizontal freezer image"
+Assert-Contains $servicios "img/catalogo-freezer-vertical.jpg" "service catalog vertical freezer image"
+Assert-Contains $servicios "img/catalogo-heladera-exhibidora.jpg" "service catalog display fridge image"
+Assert-Contains $servicios "img/catalogo-heladera-comun.jpg" "service catalog standard fridge image"
+Assert-Contains $servicios "img/catalogo-frigobar.jpg" "service catalog mini fridge image"
 
 Assert-Contains $productos $iceQuery "product ice WhatsApp query"
 
@@ -55,5 +65,19 @@ Assert-Contains $css ".logo-header img" "mobile logo styles"
 Assert-Contains $css ".hero {" "site wrapper styles"
 Assert-Contains $css "background: #f5f9fb;" "clean site background"
 Assert-NotContains $css ".hero {`r`n  background: url('../img/background-pattern.png')" "global patterned background"
+
+$catalogImages = @(
+  "img/catalogo-freezer-horizontal.jpg",
+  "img/catalogo-freezer-vertical.jpg",
+  "img/catalogo-heladera-exhibidora.jpg",
+  "img/catalogo-heladera-comun.jpg",
+  "img/catalogo-frigobar.jpg"
+)
+
+foreach ($imagePath in $catalogImages) {
+  if (-not (Test-Path $imagePath)) {
+    throw "Missing catalog image file: $imagePath"
+  }
+}
 
 Write-Host "Static site checks passed."
