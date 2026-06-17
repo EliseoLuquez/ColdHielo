@@ -277,6 +277,19 @@ section p {
   margin-bottom: 1rem;
 }
 
+.uso-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0.65rem;
+  border-radius: 50%;
+  background: rgba(0, 188, 212, 0.12);
+  color: var(--accent);
+  font-size: 1.35rem;
+}
+
 .equipment-card .btn {
   margin-top: auto;
 }
