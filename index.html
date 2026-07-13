@@ -1,333 +1,242 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alquiler de Freezers, Heladeras y Tachos | Cold Hielo</title>
-  <meta name="description"
-    content="Alquiler de freezers, heladeras, frigobares y tachos para hielo en CABA y Gran Buenos Aires. Tambien venta de hielo en cubos, picado y barra.">
-  <link rel="stylesheet" href="css/style.css?v=20260617-1" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-
-<body>
-  <div class="hero">
-    <header class="container-fluid py-2" style="background-color: #FCCE3D;">
-      <div class="d-flex flex-wrap align-items-center justify-content-between px-3 w-100">
-
-        <div class="logo-header">
-          <img src="img/logo-coldhielo-optimizado.png" alt="Cold Hielo Logo"
-            style="max-width: 200px; border-radius: 3vw;">
-        </div>
-
-        <div class="d-flex align-items-end pt-4">
-          <div class="menu-toggle d-md-none">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+{{#> layout}}
+  <main id="main-content" class="home-page">
+    <section class="home-hero">
+      <div class="home-hero__inner">
+        <div class="home-hero__copy">
+          <p class="home-hero__eyebrow">Alquiler simple, rápido y flexible</p>
+          <h1 class="visually-hidden">Alquiler de Freezers y Heladeras</h1>
+          <div class="home-hero__display-title" aria-hidden="true"><span class="home-hero__title-line">Alquiler de</span><span>Freezers</span><span>y Heladeras</span></div>
+          <p class="home-hero__lead">
+            Equipos para eventos, comercios y ferias. Verticales, horizontales y exhibidores en CABA y Gran Buenos Aires. Llevamos hasta tu local.
+          </p>
+          <div class="home-hero__actions">
+            <a href="{{{site.rentalUrl}}}" target="_blank" rel="noopener noreferrer" class="btn btn-warning home-btn home-btn--primary">
+              Consultar disponibilidad
+            </a>
+            <a href="{{{site.phoneUrl}}}" class="btn home-btn home-btn--secondary">
+              Escribinos
+            </a>
           </div>
-
-          <nav class="main-nav">
-            <ul id="mainMenu" class="nav">
-              <li class="nav-item"><a class="nav-links active" href="index.html">Inicio</a></li>
-              <li class="nav-item"><a class="nav-links" href="nosotros.html">Nosotros</a></li>
-              <li class="nav-item"><a class="nav-links" href="productos.html">Productos</a></li>
-              <li class="nav-item"><a class="nav-links" href="servicios.html">Servicios</a></li>
-              <li class="nav-item"><a class="nav-links" href="contacto.html">Contacto</a></li>
-            </ul>
-          </nav>
         </div>
 
+        <div class="home-hero__visual" aria-hidden="true">
+          <img class="home-hero__image" src="img/hero-heladeras-index.png" alt="" width="1680" height="945" fetchpriority="high" decoding="async">
+        </div>
       </div>
-    </header>
 
-    <section class="banner-index position-relative">
-      <img src="img/banner-index-2.png" alt="Banner Cold Hielo" class="img-fluid w-100">
-      <div class="banner-nosotros-texto position-absolute top-50 start-50 translate-middle text-white text-center px-3">
-        <h1 class="display-5 fw-bold">Alquiler de Freezers, Heladeras y Tachos para Hielo</h1>
-        <p class="lead mb-3">
-          Equipos para eventos, comercios, ferias y necesidades temporales en CABA y Gran Buenos Aires. Tambien venta
-          de hielo en cubos, picado y barra.
-        </p>
-        <div class="d-flex flex-column flex-sm-row justify-content-center gap-2">
-          <a href="https://wa.me/541133002956?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%0A%0ANombre%20o%20empresa%3A%0AEquipo%20y%20cantidad%3A%0AFecha%20desde%2Fhasta%3A%0ADireccion%20exacta%20y%20localidad%3A%0A%C2%BFNecesito%20hielo%3F%3A"
-            target="_blank" class="btn btn-warning fw-bold px-4 py-2">
-            Consultar disponibilidad
-          </a>
-          <a href="#equipos-destacados" class="btn btn-outline-light fw-bold px-4 py-2">
-            Ver equipos
-          </a>
+      <div class="home-hero__proof inner">
+        <div>
+          <img src="img/icons/reparto.png" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true">
+          <strong>Entrega rápida</strong>
+          <span>en CABA y GBA</span>
+        </div>
+        <div>
+          <img src="img/icons/heladera-2.png" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true">
+          <strong>Equipos sanitizados</strong>
+          <span>y listos para usar</span>
+        </div>
+        <div>
+          <img src="img/icons/atencion-personalizada.png" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true">
+          <strong>Atención personalizada</strong>
+          <span>y soporte constante</span>
+        </div>
+        <div>
+          <img src="img/icons/uso-temporal.png" alt="" width="48" height="48" loading="lazy" decoding="async" aria-hidden="true">
+          <strong>Alquiler flexible</strong>
+          <span>por el tiempo que necesitás</span>
         </div>
       </div>
     </section>
 
-    <section id="beneficios-alquiler" class="inner">
-      <p class="section-kicker text-center">Soluciones de frio</p>
-      <h2>Alquiler simple, rapido y flexible</h2>
-      <p class="section-intro">
-        Te ayudamos a resolver la conservacion de bebidas, hielo y productos refrigerados con equipos adecuados para
-        cada necesidad.
-      </p>
-      <div class="row g-3">
-        <div class="col-12 col-md-3">
-          <div class="feature-card text-center">
-            <h3>Por dia, semana o mes</h3>
-            <p>Opciones flexibles para eventos, comercios y usos temporales.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="feature-card text-center">
-            <h3>Equipos listos</h3>
-            <p>Freezers, heladeras exhibidoras, heladeras comunes y frigobares.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="feature-card text-center">
-            <h3>Atencion directa</h3>
-            <p>Consultas por WhatsApp para confirmar disponibilidad y cotizacion.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="feature-card text-center">
-            <h3>CABA y Gran Buenos Aires</h3>
-            <p>Coordinamos entrega o retiro segun disponibilidad por zona.</p>
-          </div>
-        </div>
+    <section id="beneficios-alquiler" class="home-section inner">
+      <h2>Beneficios que marcan la diferencia</h2>
+      <div class="home-wave" aria-hidden="true"></div>
+      <div class="home-benefits-grid">
+        <article class="home-card home-benefit-card">
+          <img src="img/icons/dia-semana-mes.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <h3>Por día, semana o mes</h3>
+          <p>Vos elegís el plazo. Contratos simples y sin letra chica.</p>
+        </article>
+        <article class="home-card home-benefit-card">
+          <img src="img/icons/heladera-2.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <h3>Equipos listos</h3>
+          <p>Freezers, heladeras, exhibidores y frigobares limpios y en perfecto estado.</p>
+        </article>
+        <article class="home-card home-benefit-card">
+          <img src="img/icons/whatsapp-2.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <h3>Atención directa</h3>
+          <p>Consulta por WhatsApp y recibí cotización personalizada al instante.</p>
+        </article>
+        <article class="home-card home-benefit-card">
+          <img src="img/icons/localizacion.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <h3>CABA y Gran Buenos Aires</h3>
+          <p>Cubrimos una amplia zona con logística propia para entregas rápidas.</p>
+        </article>
       </div>
     </section>
 
-    <section id="equipos-destacados" class="inner">
-      <p class="section-kicker text-center">Equipos destacados</p>
+    <section id="equipos-destacados" class="home-section inner" data-standard-fridge-image="img/catalogo-heladera-comun.jpg">
       <h2>Equipos destacados para alquilar</h2>
-      <p class="section-intro">
-        Elegi el equipo segun capacidad, tipo de uso y espacio disponible. Si tenes dudas, escribinos y te orientamos.
-      </p>
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="equipment-card text-center">
-            <img src="img/catalogo-freezer-horizontal.jpg" alt="Freezer horizontal">
-            <h3>Freezers horizontales</h3>
-            <p>Opciones de 100, 300 y 500 lts para hielo, bebidas y productos en volumen.</p>
-            <a href="https://wa.me/541133002956?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%0A%0ANombre%20o%20empresa%3A%0AEquipo%20y%20cantidad%3A%0AFecha%20desde%2Fhasta%3A%0ADireccion%20exacta%20y%20localidad%3A%0A%C2%BFNecesito%20hielo%3F%3A"
-              target="_blank" class="btn btn-outline-info fw-bold">Consultar disponibilidad</a>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="equipment-card text-center">
-            <img src="img/catalogo-freezer-vertical-exhibidor-500.jpg" alt="Freezer vertical exhibidor 500 lts">
-            <h3>Freezer vertical exhibidor</h3>
-            <p>Equipo de 500 lts con frente vidriado para exhibir y conservar productos.</p>
-            <a href="https://wa.me/541133002956?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%0A%0ANombre%20o%20empresa%3A%0AEquipo%20y%20cantidad%3A%0AFecha%20desde%2Fhasta%3A%0ADireccion%20exacta%20y%20localidad%3A%0A%C2%BFNecesito%20hielo%3F%3A"
-              target="_blank" class="btn btn-outline-info fw-bold">Consultar disponibilidad</a>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="equipment-card text-center">
-            <img src="img/catalogo-heladera-exhibidora.jpg" alt="Heladera exhibidora">
-            <h3>Heladera exhibidora</h3>
-            <p>Ideal para mostrar bebidas o productos en comercios y eventos.</p>
-            <a href="https://wa.me/541133002956?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%0A%0ANombre%20o%20empresa%3A%0AEquipo%20y%20cantidad%3A%0AFecha%20desde%2Fhasta%3A%0ADireccion%20exacta%20y%20localidad%3A%0A%C2%BFNecesito%20hielo%3F%3A"
-              target="_blank" class="btn btn-outline-info fw-bold">Consultar disponibilidad</a>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="equipment-card text-center">
-            <img src="img/catalogo-heladera-comun.jpg" alt="Heladera comun">
-            <h3>Heladera comun</h3>
-            <p>Solucion simple para bebidas, conservas y uso general.</p>
-            <a href="https://wa.me/541133002956?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%0A%0ANombre%20o%20empresa%3A%0AEquipo%20y%20cantidad%3A%0AFecha%20desde%2Fhasta%3A%0ADireccion%20exacta%20y%20localidad%3A%0A%C2%BFNecesito%20hielo%3F%3A"
-              target="_blank" class="btn btn-outline-info fw-bold">Consultar disponibilidad</a>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="equipment-card text-center">
-            <img src="img/catalogo-frigobar.jpg" alt="Frigobar">
-            <h3>Frigobar</h3>
-            <p>Compacto para espacios reducidos. Medidas orientativas: aprox. 50 x 50 x 85 cm.</p>
-            <a href="https://wa.me/541133002956?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%0A%0ANombre%20o%20empresa%3A%0AEquipo%20y%20cantidad%3A%0AFecha%20desde%2Fhasta%3A%0ADireccion%20exacta%20y%20localidad%3A%0A%C2%BFNecesito%20hielo%3F%3A"
-              target="_blank" class="btn btn-outline-info fw-bold">Consultar disponibilidad</a>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="equipment-card text-center">
-            <img src="img/catalogo-tachos-hielo-500.jpg" alt="Tachos de 500 lts para hielo">
-            <h3>Tachos para hielo 500 lts</h3>
-            <p>Contenedores para conservar hielo en eventos, barras, ferias y producciones.</p>
-            <a href="https://wa.me/541133002956?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%0A%0ANombre%20o%20empresa%3A%0AEquipo%20y%20cantidad%3A%0AFecha%20desde%2Fhasta%3A%0ADireccion%20exacta%20y%20localidad%3A%0A%C2%BFNecesito%20hielo%3F%3A"
-              target="_blank" class="btn btn-outline-info fw-bold">Consultar disponibilidad</a>
-          </div>
-        </div>
+      <div class="home-wave" aria-hidden="true"></div>
+      <div class="home-equipment-grid">
+        <article class="home-card home-equipment-card">
+          <img src="img/catalogo-freezer-horizontal.jpg" alt="Freezer horizontal" width="1000" height="1000" loading="lazy" decoding="async">
+          <h3>Freezer horizontal</h3>
+          <p>Capacidades: 100, 300 y 500 lts. Perfectos para helados, congelados y más.</p>
+          <a href="{{{site.rentalUrl}}}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info">Consultar disponibilidad</a>
+        </article>
+        <article class="home-card home-equipment-card">
+          <img src="img/catalogo-freezer-vertical-exhibidor-500.jpg" alt="Freezer exhibidor vertical" width="1000" height="1000" loading="lazy" decoding="async">
+          <h3>Freezer vertical exhibidor</h3>
+          <p>Eficiencia 360°. Ideal para exhibir y conservar tus productos.</p>
+          <a href="{{{site.rentalUrl}}}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info">Consultar disponibilidad</a>
+        </article>
+        <article class="home-card home-equipment-card">
+          <img src="img/catalogo-heladera-exhibidora.jpg" alt="Heladera exhibidora" width="1000" height="1000" loading="lazy" decoding="async">
+          <h3>Heladera exhibidora</h3>
+          <p>Ideal para bebidas y lácteos. Display luminoso, estantes regulables y gran visibilidad.</p>
+          <a href="{{{site.rentalUrl}}}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info">Consultar disponibilidad</a>
+        </article>
+        <article class="home-card home-equipment-card">
+          <img src="img/catalogo-frigobar.jpg" alt="Frigobar" width="1000" height="1000" loading="lazy" decoding="async">
+          <h3>Frigobar</h3>
+          <p>Compacto y silencioso. Ideal para habitaciones, oficinas o espacios reducidos.</p>
+          <a href="{{{site.rentalUrl}}}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info">Consultar disponibilidad</a>
+        </article>
+        <article class="home-card home-equipment-card">
+          <img src="img/catalogo-tachos-hielo-500.jpg" alt="Tachos para hielo 500 litros" width="1200" height="900" loading="lazy" decoding="async">
+          <h3>Tachos para hielo 500 lts</h3>
+          <p>Conservación por más tiempo. Ideales para eventos, ferias y producciones.</p>
+          <a href="{{{site.rentalUrl}}}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info">Consultar disponibilidad</a>
+        </article>
       </div>
-      <div class="text-center mt-4">
-        <a href="servicios.html" class="btn btn-warning fw-bold px-4 py-2">Ver todos los servicios</a>
+      <div class="home-equipment-cta">
+        <img src="img/icons/reparto.png" alt="" width="56" height="56" loading="lazy" decoding="async" aria-hidden="true">
+        <p>También podemos ayudarte a elegir el equipo correcto según el espacio, la fecha y el tipo de uso.</p>
+        <a href="servicios.html" class="btn btn-outline-info">Ver todos los servicios</a>
       </div>
     </section>
 
-    <section id="ideal-para" class="inner">
+    <section id="ideal-para" class="home-section inner">
       <h2>Ideal para</h2>
-      <div class="row g-3 mt-2">
-        <div class="col-12 col-md-4">
-          <div class="p-3 h-100 border rounded-4 bg-white text-center">
-            <span class="uso-icon" aria-hidden="true">🎉</span>
-            <h3 class="h5">Eventos y fiestas</h3>
-            <p class="mb-0">Freezers y heladeras para cumpleaños, reuniones, ferias y celebraciones.</p>
+      <div class="home-wave" aria-hidden="true"></div>
+      <div class="home-use-grid">
+        <article class="home-card home-use-card">
+          <img class="uso-icon" src="img/icons/fiesta.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <div>
+            <h3>Eventos y fiestas</h3>
+            <p>Eventos a medida para cumpleaños, reuniones y celebraciones.</p>
           </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="p-3 h-100 border rounded-4 bg-white text-center">
-            <span class="uso-icon" aria-hidden="true">🏪</span>
-            <h3 class="h5">Comercios</h3>
-            <p class="mb-0">Equipos para bebidas, productos refrigerados y necesidades temporales del local.</p>
+        </article>
+        <article class="home-card home-use-card">
+          <img class="uso-icon" src="img/icons/heladera-2.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <div>
+            <h3>Comercios</h3>
+            <p>Equipos para bebidas, productos refrigerados y necesidades temporales.</p>
           </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="p-3 h-100 border rounded-4 bg-white text-center">
-            <span class="uso-icon" aria-hidden="true">🧊</span>
-            <h3 class="h5">Uso temporal</h3>
-            <p class="mb-0">Alquiler flexible por día, semana o mes según lo que necesites.</p>
+        </article>
+        <article class="home-card home-use-card">
+          <img class="uso-icon" src="img/icons/feria.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <div>
+            <h3>Ferias y producciones</h3>
+            <p>Soluciones de frío para puestos, barras, gastronomía y proyectos en vivo.</p>
           </div>
-        </div>
+        </article>
+        <article class="home-card home-use-card">
+          <img class="uso-icon" src="img/icons/uso-temporal.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <div>
+            <h3>Uso temporal</h3>
+            <p>Alquiler flexible por días, semanas o meses, según lo que necesites.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="como-funciona-home" class="inner">
-      <p class="section-kicker text-center">Como funciona</p>
-      <h2>Como funciona el alquiler</h2>
-      <div class="row g-3 mt-2">
-        <div class="col-12 col-md-3">
-          <div class="process-card text-center">
-            <span class="paso-numero">1</span>
-            <p>Nos escribis por WhatsApp.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="process-card text-center">
-            <span class="paso-numero">2</span>
-            <p>Contas fecha, zona y tipo de uso.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="process-card text-center">
-            <span class="paso-numero">3</span>
-            <p>Confirmamos disponibilidad y cotizacion.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-3">
-          <div class="process-card text-center">
-            <span class="paso-numero">4</span>
-            <p>Coordinamos entrega o retiro.</p>
-          </div>
-        </div>
+    <section id="como-funciona-home" class="home-section inner">
+      <h2>Cómo funciona el alquiler</h2>
+      <div class="home-wave" aria-hidden="true"></div>
+      <div class="home-process-grid">
+        <article class="home-card home-process-card">
+          <span>1</span>
+          <img src="img/icons/como-funciona-1.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <p>Nos escribís por WhatsApp</p>
+        </article>
+        <article class="home-card home-process-card">
+          <span>2</span>
+          <img src="img/icons/como-funciona-2.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <p>Coordinamos fecha, hora y tipo de equipo</p>
+        </article>
+        <article class="home-card home-process-card">
+          <span>3</span>
+          <img src="img/icons/como-funciona-3.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <p>Confirmamos disponibilidad y te lo llevamos</p>
+        </article>
+        <article class="home-card home-process-card">
+          <span>4</span>
+          <img src="img/icons/como-funciona-4.png" alt="" width="384" height="384" loading="lazy" decoding="async" aria-hidden="true">
+          <p>Confirmás entrega y listo</p>
+        </article>
       </div>
     </section>
 
-    <section id="hielo-complemento" class="inner">
-      <p class="section-kicker text-center">Hielo para acompanar</p>
+    <section id="hielo-complemento" class="home-section inner">
       <h2>Venta de hielo para eventos y comercios</h2>
-      <p class="section-intro">
-        Ademas del alquiler de equipos, contamos con hielo en cubos, picado y barra para completar la solucion de frio.
-      </p>
-      <div class="servicios-lista vertical">
-        <a href="productos.html" class="servicio-item">
-          <img src="img/bolsa-barra-hielo.png" alt="Venta de hielo">
-          <p><strong>Venta de hielo</strong><br>Hielo en cubos, picado y en barra, por mayor y menor.</p>
-        </a>
-        <div class="servicio-item">
-          <img src="img/entrega-retiro-coldhielo.jpg" alt="Entrega y retiro de hielo">
-          <p><strong>Entrega y retiro</strong><br>Venta en fabrica y entrega a domicilio segun disponibilidad por zona.</p>
-        </div>
-      </div>
-      <div class="text-center mt-4">
-        <a href="https://wa.me/541133002956?text=Hola%2C%20quiero%20consultar%20por%20compra%20de%20hielo."
-          target="_blank" class="btn btn-outline-info fw-bold px-4 py-2">Consultar hielo</a>
-      </div>
-    </section>
-
-    <section id="confianza" class="inner">
-      <div class="trust-card text-center">
-        <p class="section-kicker">Confianza local</p>
-        <h2>Empresa familiar con atencion directa</h2>
-        <p>
-          Cold Hielo trabaja con atencion personalizada, trato directo y experiencia en eventos, comercios y
-          necesidades temporales en CABA y Gran Buenos Aires.
-        </p>
-      </div>
-    </section>
-
-    <section id="cta-principal" class="inner text-center">
-      <h2>Pedi tu cotizacion hoy</h2>
-      <p>
-        Si necesitas alquilar una heladera, freezer, frigobar o tacho para hielo, escribinos y te
-        orientamos con la mejor opcion disponible.
-      </p>
-      <a href="https://wa.me/541133002956?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%0A%0ANombre%20o%20empresa%3A%0AEquipo%20y%20cantidad%3A%0AFecha%20desde%2Fhasta%3A%0ADireccion%20exacta%20y%20localidad%3A%0A%C2%BFNecesito%20hielo%3F%3A"
-        target="_blank" class="btn btn-success btn-lg fw-bold px-4">
-        Consultar disponibilidad
-      </a>
-    </section>
-
-    <section id="clientes">
-      <h2>Empresas que confían en nosotros</h2>
-      <div class="clientes-slider inner">
-        <div class="slide-track">
-          <img src="img/icon-boca.png" alt="Empresa 1" />
-          <img src="img/icon-creamfields.png" alt="Empresa 2" />
-          <img src="img/icon-expo-agro.png" alt="Empresa 3" />
-          <img src="img/icon-lollapalooza.png" alt="Empresa 4" />
-          <img src="img/icon-quilmes-rock.jpg" alt="Empresa 5" />
-          <img src="img/icon-boca.png" alt="Empresa 1" />
-          <img src="img/icon-creamfields.png" alt="Empresa 2" />
-          <img src="img/icon-expo-agro.png" alt="Empresa 3" />
-          <img src="img/icon-lollapalooza.png" alt="Empresa 4" />
-          <img src="img/icon-quilmes-rock.jpg" alt="Empresa 5" />
-        </div>
-      </div>
-    </section>
-
-    <a href="https://wa.me/541133002956?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%0A%0ANombre%20o%20empresa%3A%0AEquipo%20y%20cantidad%3A%0AFecha%20desde%2Fhasta%3A%0ADireccion%20exacta%20y%20localidad%3A%0A%C2%BFNecesito%20hielo%3F%3A"
-      class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-      <img src="img/icon-whatsapp.png" alt="WhatsApp">
-    </a>
-
-    <footer>
-      <div class="footer-content-grid">
-        <div class="footer-contacto">
-          <p>📍 Prudan 119, Ramos Mejía - Buenos Aires</p>
-          <p>📞 WhatsApp: <a href="https://wa.me/541133002956">11 3300-2956</a></p>
-          <p>🕐 Administración: Lun a Sáb de 9 a 18 hs</p>
-          <p>🚚 Repartos: Lunes a sábados</p>
-          <p>🏭 Retiro en fábrica: 8 a 14 y 17 a 22 hs (Lun a Sáb)</p>
-          <div class="social-icons">
-            <a href="https://www.instagram.com/coldhielo" target="_blank">
-              <img src="img/icon-insta.jpg" alt="Instagram" />
-            </a>
-            <a href="https://www.facebook.com/coldfreezers" target="_blank">
-              <img src="img/icon-face.png" alt="Facebook" />
-            </a>
+      <div class="home-wave" aria-hidden="true"></div>
+      <div class="home-ice-grid">
+        <a href="productos.html" class="home-card home-ice-card">
+          <img class="ice-service-icon" src="img/inicio-bolsa-hielo.jpg" alt="Bolsa de hielo Cold Hielo" width="521" height="680" loading="lazy" decoding="async">
+          <div>
+            <h3>Hielo para eventos y comercios</h3>
+            <p>Hielo cilíndrico, picado y en barra para reuniones, barras, ferias, kioscos y necesidades por volumen.</p>
+            <span>Ver productos</span>
           </div>
-        </div>
-        <div class="footer-copy">
-          <p>&copy; 2026 Cold Hielo - Todos los derechos reservados</p>
+        </a>
+        <a href="{{{site.iceUrl}}}" target="_blank" rel="noopener noreferrer" class="home-card home-ice-card">
+          <img class="ice-service-icon" src="img/inicio-camion-reparto.jpg" alt="Camión de reparto Cold Hielo" width="693" height="520" loading="lazy" decoding="async">
+          <div>
+            <h3>Entrega y retiro coordinado</h3>
+            <p>Coordinamos venta en fábrica o entrega a domicilio en CABA y Gran Buenos Aires según disponibilidad por zona.</p>
+            <span>Consultar hielo</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="clientes" class="home-section inner">
+      <h2>Empresas y personas que confían en nosotros</h2>
+      <div class="home-wave" aria-hidden="true"></div>
+      <div class="home-testimonials">
+        <article class="home-card home-testimonial">
+          <p>Excelente servicio y puntualidad. Los equipos impecables y listos para usar. Los recomiendo 100%.</p>
+          <strong>Laura G.</strong>
+          <span>Organizadora de eventos</span>
+        </article>
+        <article class="home-card home-testimonial">
+          <p>Alquilamos heladeras y tachos para hielo para nuestro bar y fue un éxito. Atención rápida y muy atentos.</p>
+          <strong>Martín R.</strong>
+          <span>Dueño de bar</span>
+        </article>
+        <article class="home-card home-testimonial">
+          <p>Siempre que tenemos una feria o producción llamamos a Cold Hielo. Son nuestros aliados.</p>
+          <strong>Producciones BA</strong>
+          <span>Productora audiovisual</span>
+        </article>
+      </div>
+      <div class="clientes-slider home-logo-slider" aria-label="Empresas que confían en Cold Hielo">
+        <div class="slide-track">
+          <img src="img/icon-boca.png" alt="Boca Juniors" width="590" height="420" loading="lazy" decoding="async">
+          <img src="img/icon-creamfields.png" alt="Creamfields" width="829" height="310" loading="lazy" decoding="async">
+          <img src="img/icon-expo-agro.png" alt="Expoagro" width="500" height="500" loading="lazy" decoding="async">
+          <img src="img/icon-lollapalooza.png" alt="Lollapalooza" width="901" height="276" loading="lazy" decoding="async">
+          <img src="img/icon-quilmes-rock.jpg" alt="Quilmes Rock" width="586" height="407" loading="lazy" decoding="async">
+          <img src="img/icon-boca.png" alt="" width="590" height="420" loading="lazy" decoding="async" aria-hidden="true">
+          <img src="img/icon-creamfields.png" alt="" width="829" height="310" loading="lazy" decoding="async" aria-hidden="true">
+          <img src="img/icon-expo-agro.png" alt="" width="500" height="500" loading="lazy" decoding="async" aria-hidden="true">
+          <img src="img/icon-lollapalooza.png" alt="" width="901" height="276" loading="lazy" decoding="async" aria-hidden="true">
+          <img src="img/icon-quilmes-rock.jpg" alt="" width="586" height="407" loading="lazy" decoding="async" aria-hidden="true">
         </div>
       </div>
-    </footer>
-  </div>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggle = document.querySelector('.menu-toggle');
-      const menu = document.getElementById('mainMenu');
-
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-          menu.classList.toggle('active');
-        });
-      }
-    });
-  </script>
-</body>
-
-</html>
+  </main>
+{{/layout}}

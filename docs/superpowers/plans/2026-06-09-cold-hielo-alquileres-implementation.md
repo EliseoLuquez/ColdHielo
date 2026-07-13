@@ -35,7 +35,7 @@ Set:
 ```html
 <title>Alquiler de Freezers y Heladeras | Cold Hielo Ramos Mejia</title>
 <meta name="description"
-  content="Alquiler de freezers y heladeras por dia, semana o mes en Ramos Mejia y Zona Oeste. Tambien venta de hielo en cubos, picado y barra.">
+  content="Alquiler de freezers y heladeras por dia, semana o mes en Ramos Mejia y Zona Oeste. Tambien venta de hielo cilíndrico, picado y barra.">
 ```
 
 - [ ] **Step 2: Define rental-focused WhatsApp links inline where used**
@@ -59,7 +59,7 @@ Use this hero message:
 ```html
 <h1 class="display-5 fw-bold">Alquiler de Freezers y Heladeras en Ramos Mejia</h1>
 <p class="lead mb-3">
-  Equipos para eventos, comercios, ferias y necesidades temporales. Tambien venta de hielo en cubos, picado y barra.
+  Equipos para eventos, comercios, ferias y necesidades temporales. Tambien venta de hielo cilíndrico, picado y barra.
 </p>
 ```
 

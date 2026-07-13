@@ -58,7 +58,7 @@ Personas o comercios que necesitan resolver frio de forma temporal:
    - Se coordina entrega, retiro o modalidad disponible.
 
 6. Hielo como complemento
-   - Mantener venta de hielo en cubos, picado y barra.
+   - Mantener venta de hielo cilíndrico, picado y barra.
    - Presentarlo como complemento natural para eventos y comercios.
    - Derivar a Productos para detalles.
 
@@ -79,7 +79,7 @@ Debe funcionar como pagina principal de alquileres. Mantener equipos disponibles
 
 ### Productos
 
-Debe quedar enfocada en venta de hielo. Mantener cubos, picado y barra. Los CTA deben usar mensaje de WhatsApp especifico para compra de hielo.
+Debe quedar enfocada en venta de hielo. Mantener hielo cilíndrico, picado y barra. Los CTA deben usar mensaje de WhatsApp especifico para compra de hielo.
 
 ### Nosotros
 
@@ -121,7 +121,7 @@ Actualizar titulos y meta descriptions para priorizar alquileres en home y servi
 
 - Home: alquiler de freezers y heladeras en Ramos Mejia/Zona Oeste, con venta de hielo como complemento.
 - Servicios: alquiler por dia, semana o mes para eventos y comercios.
-- Productos: venta de hielo en cubos, picado y barra.
+- Productos: venta de hielo cilíndrico, picado y barra.
 
 Los textos visibles deben usar lenguaje local y directo, sin sonar genericos.
 

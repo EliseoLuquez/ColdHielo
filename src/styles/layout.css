@@ -1,0 +1,197 @@
+.hero {
+  background: var(--hero-background);
+}
+
+.inner {
+  width: min(100%, 72rem);
+  margin-inline: auto;
+  padding: var(--space-12) var(--space-4);
+}
+
+#beneficios-alquiler,
+#equipos-destacados,
+#ideal-para,
+#como-funciona-home,
+#hielo-complemento {
+  padding-block: var(--space-12);
+}
+
+#beneficios-alquiler,
+#como-funciona-home {
+  max-width: 73.75rem;
+}
+
+#equipos-destacados {
+  max-width: 65rem;
+}
+
+header {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  padding: 0.5rem clamp(1rem, 5vw, 4rem);
+  background: linear-gradient(180deg, #ffda48 0%, #ffcc32 100%);
+  border-bottom: 1px solid rgb(17 24 32 / 12%);
+}
+
+header > .d-flex {
+  flex-wrap: nowrap !important;
+  gap: var(--space-4);
+  width: min(100%, 72rem);
+  margin-inline: auto;
+}
+
+header > .d-flex > div:last-child {
+  margin-left: auto;
+}
+
+.logo-header img {
+  width: 140px;
+  height: auto;
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav ul {
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.main-nav ul {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.main-nav ul.active {
+  display: flex;
+}
+
+footer {
+  margin-top: 0;
+  padding: 1.25rem var(--space-4) 0;
+  background: linear-gradient(180deg, #062b4c 0%, #001c34 100%);
+  color: var(--white);
+  font-size: 0.92rem;
+}
+
+.footer-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-6);
+  max-width: 72rem;
+  margin-inline: auto;
+  align-items: start;
+}
+
+.footer-contacto,
+.footer-hours,
+.footer-social,
+.footer-brand {
+  color: rgb(229 246 255 / 92%);
+  line-height: 1.6;
+}
+
+.footer-contacto .social-icons,
+.footer-social .social-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.eventos-galeria {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+footer .footer-content-grid {
+  grid-template-columns: minmax(0, 1.25fr) repeat(3, minmax(0, 0.9fr)) minmax(0, 1.35fr);
+  gap: clamp(1.4rem, 4.2vw, 4rem);
+}
+
+footer .footer-brand,
+footer .footer-contacto,
+footer .footer-hours,
+footer .footer-social,
+footer .footer-nav,
+footer .footer-products,
+footer .footer-services {
+  color: rgb(229 246 255 / 92%);
+}
+
+footer .footer-brand::before {
+  content: "";
+  display: block;
+  width: 4.7rem;
+  height: 4.7rem;
+  margin-bottom: 0.9rem;
+  background-image: url("/img/logo-coldhielo-optimizado.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+footer h2,
+footer strong {
+  color: var(--white);
+}
+
+footer h2 {
+  margin-bottom: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: left;
+}
+
+footer a {
+  color: rgb(230 248 255);
+}
+
+footer .social-icons a {
+  color: var(--white);
+  background: transparent;
+  border-color: rgb(255 255 255 / 72%);
+  box-shadow: none;
+}
+
+footer .social-icons .instagram-fill {
+  fill: url(#footer-instagram-gradient);
+}
+
+footer .footer-brand-social {
+  margin-top: 0.95rem;
+}
+
+footer .footer-copy {
+  max-width: none;
+  margin: 1rem calc(var(--space-4) * -1) 0;
+  padding: 0.22rem var(--space-4);
+  background: var(--primary);
+  color: var(--dark);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-align: center;
+}

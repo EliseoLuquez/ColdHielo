@@ -1,0 +1,13 @@
+{{#if groupHeading}}
+  <h3 class="col-12 mt-4 mb-3 text-center">{{groupHeading}}</h3>
+{{/if}}
+<div class="col-md-4" data-catalog-item="{{category}}">
+  <article class="equipo-item text-center p-4 h-100">
+    <img src="{{image}}" alt="{{alt}}" class="img-fluid mb-3" width="{{width}}" height="{{height}}" loading="lazy" decoding="async">
+    <h4>{{name}}</h4>
+    <p>{{description}}</p>
+    <a href="{{@root.site.rentalUrl}}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-info fw-bold mt-2">
+      Consultar disponibilidad
+    </a>
+  </article>
+</div>

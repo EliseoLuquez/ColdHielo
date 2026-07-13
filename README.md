@@ -1,50 +1,59 @@
-# ❄️ Cold Hielo
+# Cold Hielo
 
-Sitio web profesional para **Cold Hielo**, una empresa familiar ubicada en Ramos Mejía, Buenos Aires, dedicada a la **venta de hielo** (en cubos, picado y en barra) y al **alquiler de heladeras y freezers**.
+Sitio web de Cold Hielo para promocionar el alquiler de freezers, heladeras, frigobares y tachos para hielo, junto con la venta de hielo en CABA y Gran Buenos Aires.
 
----
+## Sitio publicado
 
-## 🔍 Características del sitio
+[https://eliseoluquez.github.io/ColdHielo/](https://eliseoluquez.github.io/ColdHielo/)
 
-- Página moderna, responsive y optimizada para móviles
-- Menú de navegación con línea ondulada celeste para destacar la sección activa
-- Secciones:
-  - **Inicio**
-  - **Nosotros**
-  - **Productos**
-  - **Servicios**
-  - **Contacto**
-- Botón de WhatsApp flotante para contacto rápido
-- Estética minimalista y profesional
+## Tecnologias
 
----
+- Vite 5
+- Handlebars
+- HTML5, CSS y JavaScript
+- Bootstrap 5 CSS
+- GitHub Pages
 
-## 🌐 Enlace publicado
+## Desarrollo local
 
-> [https://TU_USUARIO.github.io/coldhielo/](https://TU_USUARIO.github.io/coldhielo/)  
-> _(Reemplazar TU_USUARIO por tu nombre de usuario real en GitHub una vez activo)_
+Requiere Node.js 20 o una version compatible.
 
----
+```bash
+npm install
+npm run dev
+```
 
-## 📦 Tecnologías utilizadas
+Vite mostrara en la terminal la URL local del sitio.
 
-- HTML5 + CSS3
-- Bootstrap 5
-- GitHub Pages (para hosting gratuito)
+## Verificacion y produccion
 
----
+```bash
+npm test
+npm run build
+npm run preview
+```
 
-## 📸 Vista previa
+La version de produccion se genera en `dist/`. `npm test` compila el sitio y verifica contenido, plantillas compartidas, accesibilidad, imagenes y configuracion de despliegue.
 
-<img src="img/hielo-cubo.png" alt="Vista previa Cold Hielo" width="300"/>
+## Publicacion
 
----
+Cada push a `main` ejecuta `.github/workflows/deploy-pages.yml`, valida el sitio y publica `dist/`.
 
-## 📞 Contacto
+En GitHub, la fuente de Pages debe configurarse una sola vez en:
 
-**Cold Hielo**  
-📍 Prudan 119, Ramos Mejía  
-📱 WhatsApp: [11 3300-2956](https://wa.me/541133002956)
+1. `Settings` > `Pages`.
+2. En `Build and deployment`, seleccionar `GitHub Actions`.
 
----
+Tambien se puede iniciar una publicacion manual desde la pestaña `Actions`, workflow `Deploy GitHub Pages`.
 
+## Vista previa
+
+<img src="public/img/hielo-cubo.webp" alt="Bolsa de hielo cilíndrico de Cold Hielo" width="300">
+
+## Contacto
+
+Cold Hielo
+
+Prudan 119, Ramos Mejia
+
+WhatsApp: [11 3300-2956](https://wa.me/541133002956)
