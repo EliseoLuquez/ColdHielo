@@ -51,8 +51,9 @@ header .pt-4 {
 }
 
 .main-nav .nav-links.active::after {
-  right: var(--space-4);
   left: var(--space-4);
+  right: auto;
+  width: calc(100% - (var(--space-4) * 2));
 }
 
 @media (max-width: 767.98px) {
@@ -295,6 +296,12 @@ header .pt-4 {
   .main-nav .nav-links {
     width: auto;
     text-align: center;
+  }
+
+  .main-nav .nav-links.active::after {
+    left: 0.9rem;
+    right: auto;
+    width: 3.6rem;
   }
 
   .main-nav ul.active li + li {
