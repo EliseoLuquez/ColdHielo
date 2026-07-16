@@ -1086,12 +1086,10 @@ header .pt-4 {
     z-index: 1;
     background: linear-gradient(
       180deg,
-      rgb(247 252 255 / 96%) 0%,
-      rgb(247 252 255 / 90%) 38%,
-      rgb(247 252 255 / 38%) 54%,
-      rgb(247 252 255 / 8%) 70%,
-      transparent 82%,
-      transparent 100%
+      rgb(247 252 255 / 84%) 0%,
+      rgb(247 252 255 / 78%) 52%,
+      rgb(247 252 255 / 48%) 78%,
+      rgb(247 252 255 / 18%) 100%
     );
     pointer-events: none;
   }
@@ -1131,8 +1129,8 @@ header .pt-4 {
   .home-hero__image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: center 88%;
+    object-fit: cover;
+    object-position: 43% center;
   }
 
   .home-hero__actions {
@@ -1163,6 +1161,13 @@ header .pt-4 {
 
   .home-benefit-card img {
     margin-inline: auto;
+  }
+
+  .main-nav ul.active .nav-links.active::after {
+    right: auto;
+    left: 0.9rem;
+    width: 2.9rem;
+    background-position: left center;
   }
 
   .about-hero {
