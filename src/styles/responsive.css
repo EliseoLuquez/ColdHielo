@@ -1074,44 +1074,57 @@ header .pt-4 {
 @media (max-width: 575.98px) {
   .home-hero {
     position: relative;
-    min-height: clamp(34rem, 152vw, 45rem);
-    padding-bottom: 1rem;
-    background:
-      linear-gradient(180deg, rgb(246 252 255 / 78%) 0%, rgb(246 252 255 / 58%) 40%, rgb(246 252 255 / 18%) 100%),
-      url("/img/hero-heladeras-index.png") center bottom / cover no-repeat;
+    min-height: 0;
+    padding-bottom: 0;
+    background: #eaf7fd;
   }
 
   .home-hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    z-index: 0;
+    z-index: 1;
     background:
-      radial-gradient(circle at 50% 12%, rgb(255 255 255 / 55%), transparent 34%),
-      linear-gradient(180deg, rgb(255 255 255 / 14%) 0%, rgb(255 255 255 / 38%) 100%);
+      linear-gradient(180deg, rgb(247 252 255 / 76%) 0%, rgb(247 252 255 / 60%) 58%, rgb(247 252 255 / 34%) 100%);
     pointer-events: none;
   }
 
   .home-hero__inner {
     position: relative;
-    z-index: 1;
-    min-height: clamp(34rem, 152vw, 45rem);
-    padding: 0.9rem 0.75rem 0;
+    z-index: auto;
+    min-height: clamp(39rem, 180vw, 46rem);
+    padding: 1rem 0.75rem 1.5rem;
+    align-items: flex-start;
   }
 
   .home-hero__copy {
+    position: relative;
+    z-index: 3;
     max-width: none;
     margin-inline: auto;
     padding: 1.15rem 1rem 1.35rem;
-    background: rgb(255 255 255 / 88%);
+    background: rgb(255 255 255 / 78%);
     border: 1px solid rgb(255 255 255 / 72%);
     border-radius: 1rem;
     box-shadow: 0 1rem 2rem rgb(7 31 61 / 12%);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
   }
 
   .home-hero__visual {
-    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .home-hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 54% center;
   }
 
   .home-hero__actions {
@@ -1127,7 +1140,21 @@ header .pt-4 {
   }
 
   .home-hero__proof {
+    position: relative;
+    z-index: 2;
     gap: 0.65rem;
+    background: var(--white);
+  }
+
+  .home-benefit-card {
+    width: 100%;
+    min-height: 12.5rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .home-benefit-card img {
+    margin-inline: auto;
   }
 
   .about-hero {

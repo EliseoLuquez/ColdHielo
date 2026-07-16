@@ -516,7 +516,10 @@
 }
 
 .home-benefit-card {
+  display: flex;
   min-height: 12.3rem;
+  flex-direction: column;
+  align-items: center;
   padding: 1.4rem 1.1rem;
   text-align: center;
 }
@@ -532,7 +535,7 @@
 }
 
 .home-benefit-card img {
-  margin-bottom: 0.6rem;
+  margin: 0 auto 0.6rem;
 }
 
 .home-benefit-card h3,
