@@ -337,7 +337,7 @@ header .pt-4 {
     border-radius: 0.75rem;
   }
 
-  .home-equipment-card img {
+  .home-equipment-card__media {
     height: 9.5rem;
     border-radius: 0.75rem;
   }
@@ -572,10 +572,12 @@ header .pt-4 {
   }
 
   .bottom-mobile-nav img {
-    width: 1.45rem;
-    height: 1.45rem;
-    border-radius: 0.35rem;
-    object-fit: cover;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.28rem;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #e8f6ff;
   }
 
   .bottom-mobile-nav a.active {
@@ -1584,7 +1586,7 @@ header .pt-4 {
     min-height: 0;
   }
 
-  .home-equipment-card img {
+  .home-equipment-card__media {
     height: 10rem;
   }
 
@@ -1952,6 +1954,11 @@ header .pt-4 {
 
 /* Final mobile composition: kept last so legacy responsive rules cannot override it. */
 @media (max-width: 767.98px) {
+  .page-index .menu-toggle,
+  .page-index #main-menu {
+    display: none;
+  }
+
   .home-hero {
     min-height: 0;
     padding: 0;

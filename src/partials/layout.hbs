@@ -13,7 +13,7 @@
         <nav class="bottom-mobile-nav" aria-label="Navegación rápida">
           {{#each navigation}}
             <a href="{{href}}"{{#if (isCurrent id ../page.id)}} class="active" aria-current="page"{{/if}}>
-              <img src="img/icons/{{#if (isCurrent id "index")}}localizacion{{else if (isCurrent id "nosotros")}}atencion-personalizada{{else if (isCurrent id "productos")}}venta-de-hielo{{else if (isCurrent id "servicios")}}heladera-2{{else}}whatsapp-2{{/if}}.png" alt="" width="32" height="32" aria-hidden="true">
+              <img src="img/nav/{{mobileIcon}}.svg" alt="" width="32" height="32" aria-hidden="true">
               <span>{{label}}</span>
             </a>
           {{/each}}

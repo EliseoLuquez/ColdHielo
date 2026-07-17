@@ -13,11 +13,11 @@ export const site = {
 };
 
 export const navigation = [
-  { id: "index", label: "Inicio", href: "index.html" },
-  { id: "nosotros", label: "Nosotros", href: "nosotros.html" },
-  { id: "productos", label: "Productos", href: "productos.html" },
-  { id: "servicios", label: "Servicios", href: "servicios.html" },
-  { id: "contacto", label: "Contacto", href: "contacto.html" }
+  { id: "index", label: "Inicio", href: "index.html", mobileIcon: "home" },
+  { id: "nosotros", label: "Nosotros", href: "nosotros.html", mobileIcon: "about" },
+  { id: "productos", label: "Productos", href: "productos.html", mobileIcon: "products" },
+  { id: "servicios", label: "Servicios", href: "servicios.html", mobileIcon: "services" },
+  { id: "contacto", label: "Contacto", href: "contacto.html", mobileIcon: "contact" }
 ];
 
 export const pages = {
