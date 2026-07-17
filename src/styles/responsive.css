@@ -480,7 +480,7 @@ header .pt-4 {
   }
 
   .home-logo-slider {
-    display: none;
+    display: flex;
   }
 
   .site-quote-cta {
@@ -668,29 +668,31 @@ header .pt-4 {
   }
 
   .home-logo-slider {
+    display: flex;
     width: 100%;
     max-width: 100%;
     margin-inline: auto;
     padding-inline: 0;
     overflow: hidden;
-    mask-image: none;
-    opacity: 0.82;
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    opacity: 1;
   }
 
   .home-logo-slider .slide-track {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.7rem;
+    width: calc(7.5rem * 10);
+    min-width: calc(7.5rem * 10);
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
     padding-inline: 0;
-    animation: none;
-    transform: none;
+    animation: scroll 30s linear infinite;
   }
 
   .home-logo-slider .slide-track img {
-    width: 5.5rem;
-    height: 2rem;
-    padding: 0.2rem 0.45rem;
+    width: 6.75rem;
+    height: 3rem;
+    flex: 0 0 6.75rem;
+    padding: 0.25rem 0.5rem;
   }
 
   .contact-main--whatsapp-only .contact-side {
@@ -2118,5 +2120,22 @@ header .pt-4 {
 
   footer .footer-copy {
     margin-inline: calc(var(--mobile-gutter) * -1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-logo-slider {
+    overflow-x: auto;
+    mask-image: none;
+    scrollbar-width: none;
+  }
+
+  .home-logo-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .home-logo-slider .slide-track {
+    animation: none;
+    transform: none;
   }
 }
