@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   {{> head}}
-  <body>
+  <body class="page-{{page.id}}">
     <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <div class="hero">
       {{> header}}
@@ -9,6 +9,16 @@
       {{> quote-cta}}
       {{> whatsapp}}
       {{> footer}}
+      {{#if (isCurrent page.id "index")}}
+        <nav class="bottom-mobile-nav" aria-label="Navegación rápida">
+          {{#each navigation}}
+            <a href="{{href}}"{{#if (isCurrent id ../page.id)}} class="active" aria-current="page"{{/if}}>
+              <img src="img/icons/{{#if (isCurrent id "index")}}localizacion{{else if (isCurrent id "nosotros")}}atencion-personalizada{{else if (isCurrent id "productos")}}venta-de-hielo{{else if (isCurrent id "servicios")}}heladera-2{{else}}whatsapp-2{{/if}}.png" alt="" width="32" height="32" aria-hidden="true">
+              <span>{{label}}</span>
+            </a>
+          {{/each}}
+        </nav>
+      {{/if}}
     </div>
     <script type="module" src="./src/scripts/main.js"></script>
   </body>

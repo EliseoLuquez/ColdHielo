@@ -524,6 +524,46 @@
   text-align: center;
 }
 
+.home-ice-types,
+.home-carousel-dots,
+.bottom-mobile-nav {
+  display: none;
+}
+
+.home-ice-types__track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.home-ice-type-card {
+  overflow: hidden;
+  padding: 0 0 1rem;
+  text-align: center;
+}
+
+.home-ice-type-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.home-ice-type-card h3 {
+  margin: 0.8rem 0 0.65rem;
+  color: var(--home-blue-dark);
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.home-ice-type-card .btn {
+  min-height: 2.75rem;
+  margin-inline: 0.75rem;
+  border-color: var(--home-blue);
+  color: #0075c8;
+  font-size: 0.75rem;
+  font-weight: 850;
+}
+
 .home-benefit-card img,
 .home-use-card img,
 .home-process-card img {

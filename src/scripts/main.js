@@ -63,3 +63,30 @@ if (catalogTabs.length && catalogItems.length) {
   const initialFilter = catalogTabs.find((tab) => tab.classList.contains("is-active"))?.dataset.catalogFilter;
   if (initialFilter) setCatalogFilter(initialFilter);
 }
+
+const scrollCarousels = typeof document.querySelectorAll === "function"
+  ? Array.from(document.querySelectorAll("[data-scroll-carousel]") || [])
+  : [];
+
+for (const carousel of scrollCarousels) {
+  const dots = carousel.parentElement?.querySelector("[data-carousel-dots]");
+  const cards = Array.from(carousel.children);
+  if (!dots || cards.length < 2) continue;
+
+  cards.forEach((_card, index) => {
+    const dot = document.createElement("span");
+    dot.classList.toggle("is-active", index === 0);
+    dots.append(dot);
+  });
+
+  let frame = 0;
+  carousel.addEventListener("scroll", () => {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+      const firstCard = cards[0];
+      const step = firstCard.getBoundingClientRect().width + parseFloat(getComputedStyle(carousel).columnGap || 0);
+      const activeIndex = Math.min(cards.length - 1, Math.max(0, Math.round(carousel.scrollLeft / Math.max(step, 1))));
+      Array.from(dots.children).forEach((dot, index) => dot.classList.toggle("is-active", index === activeIndex));
+    });
+  }, { passive: true });
+}
