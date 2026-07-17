@@ -9,16 +9,14 @@
       {{> quote-cta}}
       {{> whatsapp}}
       {{> footer}}
-      {{#if (isCurrent page.id "index")}}
-        <nav class="bottom-mobile-nav" aria-label="Navegación rápida">
+      <nav class="bottom-mobile-nav" aria-label="Navegación rápida">
           {{#each navigation}}
             <a href="{{href}}"{{#if (isCurrent id ../page.id)}} class="active" aria-current="page"{{/if}}>
-              <img src="img/nav/{{mobileIcon}}.svg" alt="" width="32" height="32" aria-hidden="true">
+              <img src="img/nav/{{mobileIcon}}.png" alt="" width="96" height="96" aria-hidden="true">
               <span>{{label}}</span>
             </a>
           {{/each}}
-        </nav>
-      {{/if}}
+      </nav>
     </div>
     <script type="module" src="./src/scripts/main.js"></script>
   </body>
