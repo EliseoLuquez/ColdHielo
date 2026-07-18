@@ -90,12 +90,21 @@ for (const page of pages) {
 const clientSlider = builtPages.get("index").match(/<div\s+class="slide-track">([\s\S]*?)<\/div>/i)?.[1];
 assert.ok(clientSlider, "Home page must include the client-logo animation track");
 const indexClientImages = imageTags(clientSlider);
-assert.equal(indexClientImages.length, 10, "Home page must retain both client-logo animation sets");
+assert.equal(indexClientImages.length, 16, "Home page must retain both complete client-logo animation sets");
 assert.deepEqual(
-  indexClientImages.slice(0, 5).map(({ attrs }) => attrs.get("alt")),
-  ["Boca Juniors", "Creamfields", "Expoagro", "Lollapalooza", "Quilmes Rock"]
+  indexClientImages.slice(0, 8).map(({ attrs }) => attrs.get("alt")),
+  [
+    "Boca Juniors",
+    "Creamfields",
+    "Expoagro",
+    "Lollapalooza Argentina",
+    "Quilmes Rock",
+    "Cafecito BA",
+    "Lucullus, Asociación Gastronómica Francesa en Argentina",
+    "Caminos y Sabores"
+  ]
 );
-for (const image of indexClientImages.slice(5)) {
+for (const image of indexClientImages.slice(8)) {
   assert.equal(image.attrs.get("alt"), "", `Duplicate client logo must be decorative: ${image.tag}`);
   assert.equal(image.attrs.get("aria-hidden"), "true", `Duplicate client logo must be hidden: ${image.tag}`);
 }
