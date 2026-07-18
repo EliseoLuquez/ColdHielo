@@ -1781,6 +1781,9 @@ header .pt-4 {
     background-image:
       linear-gradient(180deg, rgb(0 28 52 / 18%), rgb(0 28 52 / 46%)),
       url("/img/somos-cold-hielo.png");
+    background-color: #001c34;
+    background-position: center, center top;
+    background-size: 100% 100%, auto 78%;
   }
 
   .about-hero__image {
@@ -1826,6 +1829,10 @@ header .pt-4 {
 
   .about-hero__copy h1 {
     color: var(--white);
+  }
+
+  .about-hero__copy .about-wave {
+    margin-inline: auto;
   }
 
   .about-hero__copy p {
