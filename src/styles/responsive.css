@@ -1845,17 +1845,23 @@ header .pt-4 {
 
   .products-hero {
     min-height: clamp(26rem, 118vw, 36rem);
-    background-image:
-      linear-gradient(180deg, rgb(0 29 55 / 16%), rgb(0 29 55 / 46%)),
-      url("/img/nuestros-productos-hero.png");
+    background-color: #001d37;
+    background-image: none;
   }
 
   .products-hero > img {
-    display: none;
+    display: block;
+    inset: auto auto 0 50%;
+    width: 135%;
+    max-width: none;
+    height: auto;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: translateX(-50%);
   }
 
   .products-hero::before {
-    background: linear-gradient(180deg, rgb(0 29 55 / 18%), rgb(0 29 55 / 46%));
+    background: linear-gradient(180deg, rgb(0 29 55 / 96%) 0 48%, rgb(0 29 55 / 64%) 70%, rgb(0 29 55 / 12%) 100%);
   }
 
   .products-hero::after {
@@ -1864,20 +1870,35 @@ header .pt-4 {
   }
 
   .products-hero__content {
+    display: flex;
+    flex-direction: column;
     width: min(calc(100% - 1rem), 34rem);
     min-height: clamp(26rem, 118vw, 36rem);
     padding: 2rem 1rem 4.2rem;
     text-align: center;
-    background: rgb(9 18 24 / 70%);
+    background: linear-gradient(180deg, rgb(4 24 43 / 76%) 0 55%, rgb(4 24 43 / 32%) 78%, transparent 100%);
     border: 1px solid rgb(255 255 255 / 18%);
     border-radius: 1rem;
     box-shadow: 0 1rem 2rem rgb(7 31 61 / 14%);
-    backdrop-filter: blur(6px);
+    backdrop-filter: none;
   }
 
   .products-hero h1,
   .products-hero p {
     color: var(--white);
+  }
+
+  .products-hero h1 {
+    order: 1;
+  }
+
+  .products-hero .products-wave {
+    order: 2;
+    margin: 0 auto 1rem;
+  }
+
+  .products-hero p {
+    order: 3;
   }
 
   .services-hero {
