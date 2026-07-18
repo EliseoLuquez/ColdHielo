@@ -1732,6 +1732,10 @@ header .pt-4 {
     width: min(calc(100% - 0.75rem), 24rem);
   }
 
+  .about-history .about-wave {
+    margin-inline: auto;
+  }
+
   .about-history__media img {
     height: clamp(13rem, 72vw, 17rem);
   }
