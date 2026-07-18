@@ -1846,17 +1846,24 @@ header .pt-4 {
   .products-hero {
     min-height: clamp(26rem, 118vw, 36rem);
     background-color: #001d37;
-    background-image: url("/img/nuestros-productos-hero.png");
-    background-position: 72% center;
-    background-size: auto 100%;
+    background-image: none;
   }
 
   .products-hero > img {
-    display: none;
+    display: block;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    object-position: 72% center;
+    filter: saturate(0.9) contrast(1.05) brightness(0.42);
+    transform: none;
   }
 
   .products-hero::before {
-    background: linear-gradient(180deg, rgb(0 29 55 / 76%), rgb(0 29 55 / 56%));
+    background: linear-gradient(180deg, rgb(0 29 55 / 84%), rgb(0 29 55 / 74%));
   }
 
   .products-hero::after {
