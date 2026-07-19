@@ -1782,16 +1782,23 @@ header .pt-4 {
 
   .about-hero {
     min-height: clamp(26rem, 120vw, 36rem);
-    background-image:
-      linear-gradient(180deg, rgb(0 28 52 / 18%), rgb(0 28 52 / 46%)),
-      url("/img/somos-cold-hielo.png");
     background-color: #001c34;
-    background-position: center, center top;
-    background-size: 100% 100%, auto 78%;
+    background-image: none;
   }
 
-  .about-hero__image {
-    display: none;
+  .about-hero__image,
+  .products-hero > img,
+  .services-hero .services-hero__image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.9) contrast(1.05) brightness(0.42);
+    transform: none;
   }
 
   .about-hero::before,
@@ -1805,13 +1812,30 @@ header .pt-4 {
     pointer-events: none;
   }
 
-  .about-hero::before {
-    background: linear-gradient(180deg, rgb(0 28 52 / 20%), rgb(0 28 52 / 40%));
+  .about-hero::before,
+  .products-hero::before,
+  .services-hero::before,
+  .contact-hero::before {
+    display: none;
   }
 
-  .about-hero::after {
+  .about-hero::after,
+  .products-hero::after,
+  .services-hero::after,
+  .contact-hero::after {
+    content: "";
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: auto;
     height: clamp(5rem, 20vw, 6.75rem);
+    background: var(--white);
     clip-path: ellipse(110% 80% at 50% 100%);
+    opacity: 1;
   }
 
   .about-hero__inner {
@@ -1824,11 +1848,11 @@ header .pt-4 {
     margin-inline: auto;
     padding: 1.15rem 1rem 1.25rem;
     text-align: center;
-    background: rgb(9 18 24 / 70%);
-    border: 1px solid rgb(255 255 255 / 18%);
-    border-radius: 1rem;
-    box-shadow: 0 1rem 2rem rgb(7 31 61 / 14%);
-    backdrop-filter: blur(6px);
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
   }
 
   .about-hero__copy h1 {
@@ -1850,25 +1874,17 @@ header .pt-4 {
   }
 
   .products-hero > img {
-    display: block;
-    inset: 0;
-    z-index: 0;
-    width: 100%;
-    max-width: none;
-    height: 100%;
-    object-fit: cover;
     object-position: 72% center;
-    filter: saturate(0.9) contrast(1.05) brightness(0.42);
-    transform: none;
   }
 
-  .products-hero::before {
-    background: linear-gradient(180deg, rgb(0 29 55 / 84%), rgb(0 29 55 / 74%));
+  .about-hero__image {
+    object-position: 66% center;
   }
 
-  .products-hero::after {
-    height: clamp(5rem, 20vw, 6.75rem);
-    clip-path: ellipse(110% 80% at 50% 100%);
+  .services-hero .services-hero__image {
+    object-position: 68% center;
+    mix-blend-mode: normal;
+    opacity: 1;
   }
 
   .products-hero__content {
@@ -1905,25 +1921,8 @@ header .pt-4 {
 
   .services-hero {
     min-height: clamp(28rem, 124vw, 40rem);
-    background-image:
-      linear-gradient(180deg, rgb(6 18 32 / 16%), rgb(6 18 32 / 48%)),
-      url("/img/alquiler-freezers-heladeras-hero.png");
-  }
-
-  .services-hero__image {
-    display: none;
-  }
-
-  .services-hero::before {
-    background: linear-gradient(180deg, rgb(6 18 32 / 18%), rgb(6 18 32 / 48%));
-  }
-
-  .services-hero::after {
-    right: 0;
-    left: 0;
-    height: clamp(5rem, 20vw, 6.75rem);
-    background: var(--white);
-    clip-path: ellipse(110% 80% at 50% 100%);
+    background-color: #001c34;
+    background-image: none;
   }
 
   .services-hero__inner {
@@ -1936,16 +1935,20 @@ header .pt-4 {
     margin-inline: auto;
     padding: 1.15rem 1rem 1.25rem;
     text-align: center;
-    background: rgb(9 18 24 / 72%);
-    border: 1px solid rgb(255 255 255 / 18%);
-    border-radius: 1rem;
-    box-shadow: 0 1rem 2rem rgb(7 31 61 / 14%);
-    backdrop-filter: blur(6px);
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
   }
 
   .services-hero__copy h1,
   .services-hero__copy p {
     color: var(--white);
+  }
+
+  .page-hero-wave {
+    margin: 0.85rem auto 1rem;
   }
 
   .services-hero__actions {
@@ -1958,25 +1961,31 @@ header .pt-4 {
 
   .contact-hero {
     min-height: clamp(22rem, 108vw, 30rem);
+    background-color: #001c34;
     background-image:
-      linear-gradient(180deg, rgb(247 252 255 / 84%), rgb(247 252 255 / 92%)),
+      linear-gradient(180deg, rgb(0 29 55 / 58%), rgb(0 29 55 / 68%)),
       url("/img/nuestros-productos-hero.png");
-  }
-
-  .contact-hero::before,
-  .contact-hero::after {
-    display: none;
+    background-position: center, 72% center;
+    background-size: 100% 100%, cover;
   }
 
   .contact-hero__inner {
+    position: relative;
+    z-index: 3;
     width: min(calc(100% - 0.75rem), 34rem);
+    min-height: clamp(22rem, 108vw, 30rem);
     margin-inline: auto;
-    padding: 1.9rem 1rem 1.7rem;
-    background: rgb(255 255 255 / 86%);
-    border: 1px solid rgb(255 255 255 / 72%);
-    border-radius: 1rem;
-    box-shadow: 0 1rem 2rem rgb(7 31 61 / 10%);
-    backdrop-filter: blur(5px);
+    padding: 2rem 1rem 4.8rem;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .contact-hero h1,
+  .contact-hero p:not(.contact-kicker) {
+    color: var(--white);
   }
 
   .contact-hero h1,
