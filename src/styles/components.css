@@ -3362,33 +3362,15 @@ footer .footer-list a {
   isolation: isolate;
   overflow: hidden;
   text-align: center;
+  background-color: #001c34;
   background:
-    linear-gradient(180deg, rgb(247 252 255 / 74%), rgb(247 252 255 / 96%)),
-    url("/img/nuestros-productos-hero.png") center 48% / cover no-repeat;
+    linear-gradient(180deg, rgb(0 29 55 / 58%), rgb(0 29 55 / 68%)),
+    url("/img/nuestros-productos-hero.png") 72% center / cover no-repeat;
 }
 
 .contact-hero::before,
 .contact-hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  width: min(26vw, 18rem);
-  background:
-    radial-gradient(circle at 50% 38%, rgb(255 255 255 / 72%), transparent 0 38%),
-    url("/img/producto-hielo-picado.png") center / cover no-repeat;
-  opacity: 0.3;
-}
-
-.contact-hero::before {
-  left: 0;
-  clip-path: polygon(0 0, 100% 0, 55% 100%, 0 100%);
-}
-
-.contact-hero::after {
-  right: 0;
-  clip-path: polygon(45% 0, 100% 0, 100% 100%, 0 100%);
+  content: none;
 }
 
 .contact-hero__inner {
@@ -3430,10 +3412,14 @@ footer .footer-list a {
   text-transform: none;
 }
 
+.contact-hero h1 {
+  color: var(--white);
+}
+
 .contact-hero p:not(.contact-kicker) {
   max-width: 38rem;
   margin: 0.75rem auto 0;
-  color: var(--contact-muted);
+  color: rgb(245 251 255 / 92%);
   font-size: clamp(0.9rem, 1vw, 1rem);
   font-weight: 650;
   line-height: 1.55;
