@@ -2311,6 +2311,207 @@ header .pt-4 {
   }
 }
 
+/* Keep the home hero aligned with the services hero composition. */
+@media (min-width: 768px) {
+  .home-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: clamp(26rem, 42vw, 39rem);
+    overflow: hidden;
+    background: #f6fcff;
+  }
+
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, #f6fcff 0 38%, rgb(246 252 255 / 96%) 46%, rgb(246 252 255 / 48%) 61%, transparent 78%);
+    pointer-events: none;
+  }
+
+  .home-hero::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    z-index: 2;
+    height: 3rem;
+    background: linear-gradient(180deg, transparent, rgb(255 255 255 / 84%));
+    pointer-events: none;
+  }
+
+  .home-hero__inner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: clamp(26rem, 42vw, 39rem);
+    align-items: center;
+    margin: 0;
+    padding: clamp(1.65rem, 4vw, 3.6rem) max(2rem, calc((100vw - 94rem) / 2 + 2rem));
+  }
+
+  .home-hero__copy {
+    position: relative;
+    z-index: 3;
+    width: min(100%, 32rem);
+    max-width: 32rem;
+    text-align: left;
+  }
+
+  .home-hero__wave {
+    margin: 0.55rem 0 1rem;
+  }
+
+  .home-hero__visual {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .home-hero__visual picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: clamp(36rem, 156vw, 44rem);
+    overflow: hidden;
+    color: var(--white);
+    background: #001d37;
+  }
+
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: block;
+    background: linear-gradient(180deg, rgb(0 29 55 / 56%), rgb(0 29 55 / 72%));
+    pointer-events: none;
+  }
+
+  .home-hero::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    z-index: 4;
+    display: block;
+    height: clamp(4.25rem, 20vw, 6.75rem);
+    background: var(--white);
+    clip-path: ellipse(110% 80% at 50% 100%);
+    pointer-events: none;
+  }
+
+  .home-hero__inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: clamp(36rem, 156vw, 44rem);
+    margin: 0;
+    padding: 0;
+  }
+
+  .home-hero__visual {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    background: #001d37;
+  }
+
+  .home-hero__visual picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.9) contrast(1.05) brightness(0.48);
+  }
+
+  .home-hero__copy {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    width: min(calc(100% - 1rem), 34rem);
+    min-height: clamp(36rem, 156vw, 44rem);
+    max-width: none;
+    flex-direction: column;
+    align-items: stretch;
+    margin-inline: auto;
+    padding: 2rem 1rem 5.4rem;
+    color: var(--white);
+    text-align: center;
+    background: transparent;
+  }
+
+  .home-hero__eyebrow,
+  .home-hero__display-title,
+  .home-hero__lead {
+    max-width: 31rem;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .home-hero__eyebrow {
+    color: #75ddff;
+  }
+
+  .home-hero__display-title,
+  .home-hero__display-title span,
+  .home-hero__display-title .home-hero__title-line,
+  .home-hero__lead {
+    color: var(--white);
+  }
+
+.home-hero__wave {
+  margin: 0 auto 1rem;
+}
+
+  .home-hero__actions {
+    width: 100%;
+    max-width: 31rem;
+    margin: 1.4rem auto 0;
+  }
+
+  .home-btn--secondary {
+    color: var(--white);
+    background: rgb(0 29 55 / 62%);
+    border-color: rgb(255 255 255 / 72%);
+  }
+
+  .home-hero__proof {
+    position: relative;
+    z-index: 5;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .home-logo-slider {
     overflow-x: auto;
