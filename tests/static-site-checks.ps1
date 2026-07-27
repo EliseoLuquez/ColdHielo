@@ -66,7 +66,7 @@ $acuteO = [char]0x00F3
 $cylindricalIce = "hielo cil${acuteI}ndrico"
 
 Assert-Contains $index "Alquiler de Freezers y Heladeras | Cold Hielo" "home title"
-Assert-Contains $index "Del fr${acuteI}o nos encargamos nosotros</h1>" "home heading"
+Assert-Contains $index "Alquiler de Freezers y Heladeras</h1>" "home heading"
 Assert-NotContains $index "Alquiler de Freezers, Heladeras y Tachos" "old home title"
 Assert-Contains $index "Del fr${acuteI}o nos encargamos nosotros" "home hero heading"
 Assert-Contains $index "C${acuteO}mo funciona el alquiler" "home accented process heading"
