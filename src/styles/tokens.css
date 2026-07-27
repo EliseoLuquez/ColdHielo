@@ -11,7 +11,8 @@
   --surface-muted: #eaf0f2;
   --hero-background: #edf4f6;
   --border: #d6e0e3;
-  --font-body: "Segoe UI", Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Nunito Sans", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: "Montserrat", "Arial Black", "Segoe UI", sans-serif;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
