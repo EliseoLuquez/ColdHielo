@@ -2154,10 +2154,18 @@ header .pt-4 {
     padding: 0;
   }
 
-  .services-hero .services-hero__image {
+  .services-hero .services-hero__visual {
     position: absolute;
     inset: 0;
     z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .services-hero .services-hero__image {
+    position: static;
     display: block;
     width: 100%;
     max-width: none;

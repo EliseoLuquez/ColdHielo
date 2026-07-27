@@ -2366,20 +2366,19 @@
   line-height: 1.25;
 }
 
-.services-hero__image {
+.services-hero__visual {
   position: relative;
   z-index: 1;
   grid-column: 2;
   grid-row: 1;
   width: 100%;
-  max-width: 100%;
-  justify-self: stretch;
-  object-fit: contain;
-  object-position: left center;
-  mix-blend-mode: multiply;
-  filter: drop-shadow(0 1.2rem 2rem rgb(7 31 61 / 10%));
-  opacity: 1;
-  pointer-events: none;
+  height: 100%;
+  overflow: hidden;
+  background: url("/img/alquiler-freezers-heladeras-hero.png") 60% center / cover no-repeat;
+}
+
+.services-hero__image {
+  display: none;
 }
 
 .services-benefits {
