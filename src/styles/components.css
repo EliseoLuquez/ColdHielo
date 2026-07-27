@@ -3393,6 +3393,12 @@ footer .footer-list a {
   display: flex;
   width: max-content;
   margin-inline: auto;
+  color: var(--white);
+  background: rgb(255 255 255 / 12%);
+}
+
+.contact-hero .page-hero-wave {
+  margin: 0.75rem auto 0;
 }
 
 .contact-hero h1,
