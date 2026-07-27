@@ -1176,7 +1176,7 @@
 }
 
 .about-values .about-wave {
-  margin-top: 0.75rem;
+  margin: 0.75rem auto 0;
 }
 
 .about-values__grid {
