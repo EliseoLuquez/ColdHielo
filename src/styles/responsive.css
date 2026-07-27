@@ -2314,49 +2314,33 @@ header .pt-4 {
 /* Keep the home hero aligned with the services hero composition. */
 @media (min-width: 768px) {
   .home-hero {
-    position: relative;
-    isolation: isolate;
-    min-height: clamp(26rem, 42vw, 39rem);
-    overflow: hidden;
+    min-height: 0;
     background: #f6fcff;
   }
 
   .home-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: linear-gradient(90deg, #f6fcff 0 38%, rgb(246 252 255 / 96%) 46%, rgb(246 252 255 / 48%) 61%, transparent 78%);
-    pointer-events: none;
+    content: none;
   }
 
   .home-hero::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -1px;
-    left: 0;
-    z-index: 2;
-    height: 3rem;
-    background: linear-gradient(180deg, transparent, rgb(255 255 255 / 84%));
-    pointer-events: none;
+    content: none;
   }
 
   .home-hero__inner {
-    position: relative;
-    display: flex;
-    width: 100%;
-    min-height: clamp(26rem, 42vw, 39rem);
-    align-items: center;
-    margin: 0;
-    padding: clamp(1.65rem, 4vw, 3.6rem) max(2rem, calc((100vw - 94rem) / 2 + 2rem));
+    display: grid;
+    grid-template-columns: minmax(21rem, 0.82fr) minmax(0, 1.18fr);
+    gap: 0;
+    width: min(100% - 4rem, 94rem);
+    min-height: clamp(26rem, 38vw, 35rem);
+    margin-inline: auto;
+    padding: clamp(1.5rem, 3vw, 3rem) 0;
   }
 
   .home-hero__copy {
-    position: relative;
-    z-index: 3;
-    width: min(100%, 32rem);
-    max-width: 32rem;
+    z-index: 1;
+    width: min(100%, 30rem);
+    max-width: 30rem;
+    padding: 0 clamp(1rem, 3vw, 3rem) 0 0;
     text-align: left;
   }
 
@@ -2365,12 +2349,11 @@ header .pt-4 {
   }
 
   .home-hero__visual {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    aspect-ratio: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .home-hero__visual picture {
@@ -2382,8 +2365,8 @@ header .pt-4 {
   .home-hero__image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
+    object-position: left center;
   }
 }
 
