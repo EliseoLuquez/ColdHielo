@@ -3173,14 +3173,14 @@
 
 .footer-brand p {
   max-width: 16rem;
-  color: rgb(229 246 255 / 92%);
+  color: var(--dark);
   font-size: 0.95rem;
   line-height: 1.45;
 }
 
 .footer-brand .footer-slogan {
   margin-bottom: 0.45rem;
-  color: var(--white);
+  color: var(--dark);
   font-family: var(--font-heading);
   font-size: 0.82rem;
   font-weight: 800;
@@ -3192,7 +3192,7 @@
 .footer-hours h2,
 .footer-social h2 {
   margin-bottom: 0.75rem;
-  color: var(--white);
+  color: var(--dark);
   font-size: 1rem;
   font-weight: 800;
   text-align: left;
@@ -3245,7 +3245,7 @@ footer .footer-list a {
   width: 1.55rem;
   height: 1.55rem;
   place-items: center;
-  color: rgb(229 246 255 / 92%);
+  color: var(--dark);
 }
 
 .footer-contact-icon svg {
