@@ -23,8 +23,8 @@ export const navigation = [
 export const pages = {
   index: {
     id: "index",
-    title: "Alquiler de Freezers y Heladeras | Cold Hielo",
-    description: "Alquiler de freezers, heladeras, frigobares y tachos para hielo en CABA y Gran Buenos Aires. También venta de hielo cilíndrico, picado y barra.",
+    title: "Alquiler de Freezers y Heladeras y Venta de Hielo | Cold Hielo",
+    description: "Alquiler de freezers y heladeras y venta de hielo en CABA y Gran Buenos Aires. Hielo cilíndrico, picado y en barra.",
     whatsappUrl: site.rentalUrl
   },
   servicios: {

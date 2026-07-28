@@ -65,7 +65,7 @@ $acuteI = [char]0x00ED
 $acuteO = [char]0x00F3
 $cylindricalIce = "hielo cil${acuteI}ndrico"
 
-Assert-Contains $index "Alquiler de Freezers y Heladeras | Cold Hielo" "home title"
+Assert-Contains $index "Alquiler de Freezers y Heladeras y Venta de Hielo | Cold Hielo" "home title"
 Assert-Contains $index "Alquiler de Freezers y Heladeras</h1>" "home heading"
 Assert-NotContains $index "Alquiler de Freezers, Heladeras y Tachos" "old home title"
 Assert-Contains $index "Del fr${acuteI}o nos encargamos nosotros" "home hero heading"
@@ -129,7 +129,7 @@ Assert-Contains $productos $rentalQuery "product shared quote CTA WhatsApp query
 Assert-Contains $nosotros "equipo de fr${acuteI}o" "about accented cold-equipment copy"
 Assert-Contains $nosotros "mejor opci${acuteO}n" "about accented option copy"
 Assert-Contains $contacto "title=`"Mapa de ubicaci${acuteO}n de Cold Hielo`"" "contact map accessible title"
-Assert-Contains $sourceData "Tambi${acuteE}n venta de hielo" "accented metadata description"
+Assert-Contains $sourceData "venta de hielo en CABA y Gran Buenos Aires" "metadata description"
 Assert-Contains $sourceData "Opci${acuteO}n compacta" "accented equipment option"
 Assert-Contains $sourceData "conservaci${acuteO}n de hielo" "accented equipment conservation"
 Assert-Contains $sourceData "Compacto y pr${acuteA}ctico" "accented mini-fridge description"

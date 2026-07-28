@@ -3178,6 +3178,16 @@
   line-height: 1.45;
 }
 
+.footer-brand .footer-slogan {
+  margin-bottom: 0.45rem;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
 .footer-contacto h2,
 .footer-hours h2,
 .footer-social h2 {
