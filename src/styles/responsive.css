@@ -1040,6 +1040,15 @@ header .pt-4 {
   height: 0.35rem;
 }
 
+@media (min-width: 768px) {
+  .main-nav .nav-links.active::after {
+    right: auto;
+    left: 50%;
+    width: 3rem;
+    transform: translateX(-50%);
+  }
+}
+
 .home-page .inner,
 .home-page .home-section.inner {
   padding-block: clamp(1.7rem, 3.2vw, 2.8rem);
