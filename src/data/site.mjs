@@ -7,6 +7,7 @@ export const site = {
   instagramUrl: "https://www.instagram.com/coldhielo",
   facebookUrl: "https://www.facebook.com/coldfreezers",
   address: "Prudan 119, Ramos Mejía - Buenos Aires",
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=Prudan+119%2C+Ramos+Mej%C3%ADa%2C+Buenos+Aires",
   administrationHours: "Lun a Sáb de 9 a 18 hs",
   deliveryHours: "Lunes a sábados",
   pickupHours: "8 a 14 y 17 a 22 hs (Lun a Sáb)"

@@ -584,6 +584,105 @@ header .pt-4 {
   .whatsapp-float {
     bottom: calc(5rem + env(safe-area-inset-bottom));
   }
+
+  .about-hero {
+    min-height: clamp(31rem, 134vw, 38rem);
+  }
+
+  .about-hero__inner {
+    min-height: clamp(31rem, 134vw, 38rem);
+    padding: 2.5rem 1rem 5.5rem;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 3.7rem);
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-history {
+    width: min(100% - 2rem, 34rem);
+    gap: 2rem;
+    padding-block: clamp(3.5rem, 12vw, 4.5rem);
+  }
+
+  .about-history h2,
+  .about-section-heading h2,
+  .about-values h2,
+  .about-coverage h2 {
+    font-size: clamp(1.8rem, 8vw, 2.2rem);
+  }
+
+  .about-history p,
+  .about-section-heading p,
+  .about-offer-card p,
+  .about-coverage p {
+    font-size: 1rem;
+  }
+
+  .about-history__media img {
+    height: min(75vw, 24rem);
+  }
+
+  .about-gallery {
+    padding-bottom: clamp(3.5rem, 12vw, 4.5rem);
+  }
+
+  .about-gallery__grid {
+    gap: 1rem;
+  }
+
+  .about-values__inner {
+    gap: 2.25rem;
+    padding-block: clamp(3.8rem, 12vw, 5rem);
+  }
+
+  .about-value-card {
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .about-value-card img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .about-offer {
+    padding-block: clamp(3.5rem, 12vw, 4.5rem);
+  }
+
+  .about-offer-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .about-offer-card > div {
+    align-items: center;
+  }
+
+  .about-offer-card__cta {
+    margin-top: 1rem;
+  }
+
+  .about-coverage {
+    padding-bottom: clamp(3.5rem, 12vw, 4.5rem);
+  }
+
+  .about-coverage__copy {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+  }
+
+  .about-coverage__map {
+    min-height: 14rem;
+  }
 }
 
 @media (max-width: 359.98px) {
@@ -2526,5 +2625,155 @@ header .pt-4 {
   .home-logo-slider .slide-track {
     animation: none;
     transform: none;
+  }
+}
+
+/* Final home overrides: keep the desktop scale and the mobile composition intentional. */
+@media (min-width: 768px) {
+  .home-hero__inner {
+    grid-template-columns: minmax(25rem, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(1.5rem, 4vw, 4rem);
+    width: min(100% - 4rem, var(--content-max));
+    min-height: clamp(30rem, 42vw, 38rem);
+  }
+
+  .home-hero__copy {
+    width: min(100%, 34rem);
+    max-width: 34rem;
+    padding-right: 0;
+  }
+
+  .home-hero__visual {
+    align-self: stretch;
+  }
+
+  .home-hero__image {
+    object-position: center;
+  }
+}
+
+@media (max-width: 1023.98px) and (min-width: 768px) {
+  .home-equipment-grid,
+  .home-use-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-equipment-card {
+    min-height: 23rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .about-values__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-values__title {
+    text-align: center;
+  }
+
+  .about-values .about-wave {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home-page .home-section {
+    padding-block: clamp(3.5rem, 12vw, 4.5rem);
+  }
+
+  .home-page .home-section h2 {
+    font-size: clamp(1.75rem, 7vw, 2.05rem);
+  }
+
+  .home-hero__display-title {
+    font-size: clamp(2.65rem, 12vw, 3.45rem);
+    line-height: 1.04;
+  }
+
+  .home-hero__proof {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    padding: 1.25rem var(--content-gutter) 2rem;
+  }
+
+  .home-hero__proof div {
+    grid-template-columns: 3rem minmax(0, 1fr);
+    font-size: 0.82rem;
+  }
+
+  .home-hero__proof img {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .home-benefit-card img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .home-benefits-grid,
+  .home-use-grid,
+  .home-equipment-grid,
+  .home-process-grid,
+  .home-ice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-equipment-grid,
+  .home-process-grid {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    margin-inline: 0;
+    padding: 0;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .home-ice-types__track {
+    max-width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
+    overflow-x: auto;
+  }
+
+  .home-equipment-card,
+  .home-process-card {
+    min-width: 0;
+    scroll-snap-align: none;
+  }
+
+  .home-benefit-card,
+  .home-equipment-card,
+  .home-use-card,
+  .home-process-card {
+    min-height: auto;
+  }
+
+  .home-equipment-card__media {
+    height: min(62vw, 16rem);
+  }
+
+  .home-ice-card {
+    grid-template-columns: minmax(7rem, 9rem) minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  .home-ice-card img {
+    width: 100%;
+    height: 7.5rem;
+  }
+
+  .home-process-card::after {
+    top: auto;
+    right: auto;
+    bottom: -1.05rem;
+    left: 50%;
+    width: 2px;
+    height: 0.8rem;
+    border-top: 0;
+    border-left: 2px dashed var(--home-yellow);
+    transform: translateX(-50%);
   }
 }

@@ -3,9 +3,9 @@
 }
 
 .inner {
-  width: min(100%, 72rem);
+  width: min(100%, var(--content-max));
   margin-inline: auto;
-  padding: var(--space-12) var(--space-4);
+  padding: var(--section-space) var(--content-gutter);
 }
 
 #beneficios-alquiler,
@@ -13,23 +13,23 @@
 #ideal-para,
 #como-funciona-home,
 #hielo-complemento {
-  padding-block: var(--space-12);
+  padding-block: var(--section-space);
 }
 
 #beneficios-alquiler,
 #como-funciona-home {
-  max-width: 73.75rem;
+  max-width: var(--content-max);
 }
 
 #equipos-destacados {
-  max-width: 65rem;
+  max-width: var(--content-max);
 }
 
 header {
   position: relative;
   z-index: 20;
   display: flex;
-  min-height: 72px;
+  min-height: 80px;
   align-items: center;
   padding: 0.5rem clamp(1rem, 5vw, 4rem);
   background: var(--brand-yellow);
@@ -39,7 +39,7 @@ header {
 header > .d-flex {
   flex-wrap: nowrap !important;
   gap: var(--space-4);
-  width: min(100%, 72rem);
+  width: min(100%, var(--content-max));
   margin-inline: auto;
 }
 
@@ -48,7 +48,7 @@ header > .d-flex > div:last-child {
 }
 
 .logo-header img {
-  width: 140px;
+  width: 152px;
   height: auto;
 }
 
@@ -137,7 +137,7 @@ footer .footer-social,
 footer .footer-nav,
 footer .footer-products,
 footer .footer-services {
-  color: rgb(229 246 255 / 92%);
+  color: var(--dark);
 }
 
 footer .footer-brand::before {

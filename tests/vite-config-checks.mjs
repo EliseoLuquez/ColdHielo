@@ -13,9 +13,9 @@ assert.ok(pagesPlugin, "Handlebars pages plugin must be configured");
 
 const rendered = pagesPlugin.transformIndexHtml.handler(source, { path: "/INDEX.HTML" });
 
-assert.match(rendered, /<title>Alquiler de Freezers y Heladeras \| Cold Hielo<\/title>/);
+assert.match(rendered, /<title>Alquiler de Freezers y Heladeras y Venta de Hielo \| Cold Hielo<\/title>/);
 
 Handlebars.registerPartial("head", "<head><title>STALE PARTIAL</title></head>");
 const refreshed = pagesPlugin.transformIndexHtml.handler(source, { path: "/index.html" });
-assert.match(refreshed, /<title>Alquiler de Freezers y Heladeras \| Cold Hielo<\/title>/);
+assert.match(refreshed, /<title>Alquiler de Freezers y Heladeras y Venta de Hielo \| Cold Hielo<\/title>/);
 console.log("Vite config checks passed.");
