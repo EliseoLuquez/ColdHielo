@@ -3171,14 +3171,14 @@
 
 .products-page .products-hero__content {
   width: min(100% - (var(--content-gutter) * 2), var(--products-content-max));
-  align-items: flex-start;
+  align-items: center;
   padding: clamp(4.5rem, 7vw, 6.25rem) 0 clamp(5.75rem, 8vw, 7.5rem);
-  text-align: left;
+  text-align: center;
 }
 
 .products-page .products-hero h1 {
   max-width: 42rem;
-  margin: 0 0 1.25rem;
+  margin: 0 auto 1.25rem;
   font-size: clamp(3.25rem, 4.4vw, 4rem);
   line-height: 1.08;
   letter-spacing: -0.04em;
@@ -3186,12 +3186,12 @@
 }
 
 .products-page .products-hero .products-wave {
-  margin: 0 0 1.2rem;
+  margin: 0 auto 1.2rem;
 }
 
 .products-page .products-hero p {
   max-width: 42rem;
-  margin: 0;
+  margin: 0 auto;
   font-size: clamp(1rem, 1.35vw, 1.125rem);
   line-height: 1.65;
 }
