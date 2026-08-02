@@ -69,7 +69,11 @@ for (const page of pages) {
       assertLazyAsync(image, `${page}.html below-fold image`);
     }
   } else {
-    assert.equal(mainImages.length, 0, "contacto.html must not gain a content bitmap");
+    assert.equal(mainImages.length, 8, "contacto.html must include the eight approved service icons");
+    for (const image of mainImages) {
+      assert.match(image.attrs.get("src") ?? "", /^img\/icons\//, "contacto.html icons must use the approved local icon folder");
+      assertLazyAsync(image, "contacto.html service icon");
+    }
   }
 
   const headerImage = imageTags(elementContent(html, "header"))[0];
