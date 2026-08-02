@@ -2777,3 +2777,159 @@ header .pt-4 {
     transform: translateX(-50%);
   }
 }
+/* Productos: preserve the wider desktop layout without horizontal overflow. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .products-page .products-hero__content {
+    width: min(100% - (var(--content-gutter) * 2), var(--products-content-max));
+  }
+
+  .products-page .products-grid,
+  .products-page .products-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .products-page .product-type-card {
+    min-height: 29rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .products-page .products-hero {
+    min-height: clamp(28rem, 120vw, 36rem);
+  }
+
+  .products-page .products-hero__content {
+    align-items: center;
+    width: min(100% - 2rem, 34rem);
+    min-height: inherit;
+    padding: 3.25rem 0 5.25rem;
+    text-align: center;
+  }
+
+  .products-page .products-hero h1 {
+    font-size: clamp(2.45rem, 12.5vw, 3.25rem);
+  }
+
+  .products-page .products-hero .products-wave {
+    margin-inline: auto;
+  }
+
+  .products-page .products-section,
+  .products-page .products-benefits {
+    width: min(100% - 2rem, 34rem);
+  }
+
+  .products-page .products-types {
+    padding-block: 3.25rem 3rem;
+  }
+
+  .products-page .products-grid,
+  .products-page .products-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .products-page .product-type-card {
+    min-height: 0;
+  }
+
+  .products-page .product-type-card > img {
+    height: clamp(11rem, 57vw, 14rem);
+  }
+
+  .products-page .products-benefit {
+    min-height: 0;
+  }
+}
+
+/* Contacto: stack information without shrinking tap targets on small screens. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .contact-page .contact-quick,
+  .contact-page .contact-help__grid,
+  .contact-page .contact-feature-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-page .contact-main {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page .contact-side {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-page .contact-hero {
+    min-height: clamp(28rem, 120vw, 36rem);
+    background-position: 62% center;
+  }
+
+  .contact-page .contact-hero__inner {
+    width: min(100% - 2rem, 34rem);
+    padding-block: 3.5rem 5rem;
+  }
+
+  .contact-page .contact-hero h1 {
+    font-size: clamp(2.5rem, 12.5vw, 3.25rem);
+  }
+
+  .contact-page .contact-quick,
+  .contact-page .contact-main,
+  .contact-page .contact-whatsapp,
+  .contact-page .contact-help,
+  .contact-page .contact-feature-strip {
+    width: min(100% - 2rem, 34rem);
+  }
+
+  .contact-page .contact-quick,
+  .contact-page .contact-main,
+  .contact-page .contact-side,
+  .contact-page .contact-help__grid,
+  .contact-page .contact-feature-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page .contact-quick {
+    margin-top: -1rem;
+  }
+
+  .contact-page .contact-quick__item {
+    min-height: 5.4rem;
+    padding: 1rem;
+  }
+
+  .contact-page .contact-main {
+    margin-top: 2rem;
+  }
+
+  .contact-page .contact-map {
+    height: clamp(17rem, 68vw, 22rem);
+  }
+
+  .contact-page .contact-whatsapp {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .contact-page .contact-whatsapp a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-page .contact-help-card {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .services-process .services-process__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .services-process .services-process__grid {
+    grid-template-columns: 1fr;
+  }
+}

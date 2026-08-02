@@ -3158,6 +3158,146 @@
   line-height: 1.35;
 }
 
+/* Productos: desktop-first scale and readable commerce cards. */
+.products-page {
+  --products-content-max: 78rem;
+  --products-card-radius: 0.8rem;
+  --products-card-shadow: 0 1rem 2.5rem rgb(7 31 61 / 12%);
+}
+
+.products-page .products-hero {
+  min-height: clamp(26rem, 31vw, 31rem);
+}
+
+.products-page .products-hero__content {
+  width: min(100% - (var(--content-gutter) * 2), var(--products-content-max));
+  align-items: flex-start;
+  padding: clamp(4.5rem, 7vw, 6.25rem) 0 clamp(5.75rem, 8vw, 7.5rem);
+  text-align: left;
+}
+
+.products-page .products-hero h1 {
+  max-width: 42rem;
+  margin: 0 0 1.25rem;
+  font-size: clamp(3.25rem, 4.4vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  text-transform: none;
+}
+
+.products-page .products-hero .products-wave {
+  margin: 0 0 1.2rem;
+}
+
+.products-page .products-hero p {
+  max-width: 42rem;
+  margin: 0;
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  line-height: 1.65;
+}
+
+.products-page .products-section,
+.products-page .products-benefits {
+  width: min(100% - (var(--content-gutter) * 2), var(--products-content-max));
+}
+
+.products-page .products-types {
+  padding-block: clamp(3.75rem, 6vw, 5.5rem) clamp(3.5rem, 5vw, 4.75rem);
+}
+
+.products-page .products-heading {
+  max-width: 48rem;
+  margin-bottom: clamp(2rem, 3vw, 2.75rem);
+}
+
+.products-page .products-heading h2 {
+  font-size: clamp(2rem, 2.6vw, 2.375rem);
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.products-page .products-heading p {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.products-page .products-grid {
+  gap: clamp(1.25rem, 2.2vw, 2rem);
+}
+
+.products-page .product-type-card {
+  min-height: 31rem;
+  padding: 1rem;
+  border-radius: var(--products-card-radius);
+  box-shadow: var(--products-card-shadow);
+}
+
+.products-page .product-type-card > img {
+  height: clamp(12rem, 16vw, 14.5rem);
+  border-radius: calc(var(--products-card-radius) - 0.15rem);
+}
+
+.products-page .product-type-card__body {
+  padding: 1.25rem 0.75rem 0.5rem;
+}
+
+.products-page .product-type-card h3 {
+  font-size: clamp(1.25rem, 1.7vw, 1.5rem);
+  line-height: 1.25;
+}
+
+.products-page .product-type-card p {
+  max-width: 19rem;
+  margin: 0.8rem auto 1.4rem;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+.products-page .product-card-btn {
+  width: min(100%, 18rem);
+  min-height: 2.75rem;
+  margin-top: auto;
+  padding-inline: 1.25rem;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+}
+
+.products-page .product-card-btn:active {
+  transform: translateY(0);
+}
+
+.products-page .products-benefits {
+  gap: 1rem;
+  margin-top: 0;
+  margin-bottom: clamp(3rem, 5vw, 5rem);
+  padding: clamp(1.25rem, 2.2vw, 1.75rem);
+  border-radius: var(--products-card-radius);
+}
+
+.products-page .products-benefit {
+  grid-template-columns: 3.75rem minmax(0, 1fr);
+  gap: 1rem;
+  min-height: 7.5rem;
+  padding: 0.5rem;
+}
+
+.products-page .products-benefit img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.products-page .products-benefit h3 {
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.products-page .products-benefit p {
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
 .footer-brand strong {
   display: block;
   margin-bottom: 0.5rem;
@@ -4189,6 +4329,100 @@ footer .footer-list a:focus-visible {
   font-size: 0.72rem;
   font-weight: 650;
   line-height: 1.35;
+}
+
+/* Contacto: larger desktop layout and centralized contact information. */
+.contact-page {
+  --contact-content-max: 78rem;
+  --contact-card-radius: 0.85rem;
+  --contact-card-shadow: 0 1rem 2.5rem rgb(7 31 61 / 10%);
+}
+
+.contact-page .contact-hero { min-height: clamp(20rem, 27vw, 27rem); background-position: center 44%; }
+.contact-page .contact-hero__inner { width: min(100% - (var(--content-gutter) * 2), var(--contact-content-max)); padding-block: clamp(4.5rem, 6vw, 5.8rem); }
+.contact-page .contact-hero h1 { font-size: clamp(3.25rem, 4.4vw, 4rem); line-height: 1.08; letter-spacing: -0.04em; }
+.contact-page .contact-hero p:not(.contact-kicker) { max-width: 46rem; font-size: clamp(1rem, 1.35vw, 1.125rem); line-height: 1.65; }
+
+.contact-page .contact-quick,
+.contact-page .contact-main,
+.contact-page .contact-whatsapp,
+.contact-page .contact-help,
+.contact-page .contact-feature-strip { width: min(100% - (var(--content-gutter) * 2), var(--contact-content-max)); }
+
+.contact-page .contact-quick { margin-top: -1.3rem; border-radius: var(--contact-card-radius); box-shadow: var(--contact-card-shadow); }
+.contact-page .contact-quick__item { min-height: 6.8rem; gap: 1rem; padding: 1.25rem 1.4rem; text-decoration: none; }
+.contact-page .contact-quick__item strong { font-size: 1rem; }
+.contact-page .contact-quick__item small { color: var(--contact-blue-dark); font-size: 0.9rem; line-height: 1.45; }
+.contact-page .contact-icon { width: 3.25rem; height: 3.25rem; }
+.contact-page .contact-icon svg { width: 1.55rem; height: 1.55rem; }
+
+.contact-page .contact-main { grid-template-columns: minmax(0, 1.35fr) minmax(21rem, 0.9fr); gap: clamp(1.5rem, 2.7vw, 2.5rem); margin-top: clamp(2rem, 4vw, 3.5rem); }
+.contact-page .contact-side { grid-template-columns: 1fr; gap: clamp(1.25rem, 2vw, 1.5rem); }
+.contact-page .contact-side-card { padding: clamp(1.35rem, 2.2vw, 1.8rem); border-radius: var(--contact-card-radius); box-shadow: var(--contact-card-shadow); }
+.contact-page .contact-side-card h2 { font-size: clamp(1.35rem, 1.8vw, 1.65rem); line-height: 1.25; }
+.contact-page .contact-side-card p { font-size: 1rem; line-height: 1.65; }
+.contact-page .contact-side-card__note { margin-top: 1rem !important; color: var(--contact-ink) !important; font-weight: 700; }
+.contact-page .contact-map { height: clamp(23rem, 39vw, 30rem); margin-top: 1.2rem; border-radius: calc(var(--contact-card-radius) - 0.15rem); }
+.contact-page .contact-side-card > a { min-height: 2.75rem; margin-top: 1rem; padding-inline: 1.1rem; font-size: 0.95rem; border-radius: 0.5rem; }
+.contact-page .contact-hours { gap: 0.75rem; margin-top: 1rem; }
+.contact-page .contact-hours div { padding: 0.8rem 0; border-bottom: 1px solid var(--contact-line); }
+.contact-page .contact-hours dt,
+.contact-page .contact-hours dd { font-size: 0.95rem; }
+.contact-page .contact-hours dd { color: var(--contact-blue-dark); font-weight: 800; }
+
+.contact-page .contact-whatsapp { grid-template-columns: 5.25rem minmax(0, 1fr) auto; gap: 1.25rem; margin-top: clamp(2.5rem, 5vw, 4.5rem); padding: clamp(1.4rem, 2.6vw, 2rem); border-radius: var(--contact-card-radius); }
+.contact-page .contact-whatsapp__icon { width: 4.75rem; height: 4.75rem; }
+.contact-page .contact-whatsapp__icon svg { width: 2.55rem; height: 2.55rem; }
+.contact-page .contact-whatsapp h2 { font-size: clamp(1.4rem, 2vw, 1.75rem); }
+.contact-page .contact-whatsapp p { font-size: 1rem; line-height: 1.6; }
+.contact-page .contact-whatsapp a { min-height: 2.9rem; padding-inline: 1.35rem; font-size: 0.95rem; }
+
+.contact-page .contact-help { margin-top: clamp(3.5rem, 6vw, 5rem); }
+.contact-page .contact-help h2 { font-size: clamp(2rem, 2.7vw, 2.4rem); }
+.contact-page .contact-help__grid { gap: clamp(1rem, 2vw, 1.5rem); margin-top: 1.8rem; }
+.contact-page .contact-help-card { min-height: 18rem; padding: 1.5rem; color: inherit; text-decoration: none; border-radius: var(--contact-card-radius); box-shadow: var(--contact-card-shadow); }
+.contact-page .contact-help-card:focus-visible { outline: 3px solid var(--contact-blue); outline-offset: 3px; }
+.contact-page .contact-help-card__icon { width: 4.75rem; height: 4.75rem; }
+.contact-page .contact-help-card__icon svg { width: 2.25rem; height: 2.25rem; }
+.contact-page .contact-help-card h3 { font-size: 1.25rem; line-height: 1.3; }
+.contact-page .contact-help-card p { font-size: 0.95rem; line-height: 1.6; }
+.contact-page .contact-help-card > span { margin-top: auto; color: var(--contact-blue-dark); font-size: 0.9rem; font-weight: 900; }
+.contact-page .contact-help-card > span::after { content: " →"; }
+
+.contact-page .contact-feature-strip { gap: 1rem; margin-top: clamp(3.5rem, 6vw, 5rem); margin-bottom: clamp(3rem, 5vw, 4.5rem); padding: clamp(1.25rem, 2vw, 1.7rem); border-radius: var(--contact-card-radius); box-shadow: var(--contact-card-shadow); }
+.contact-page .contact-feature-strip div { grid-template-columns: 3rem minmax(0, 1fr); gap: 0.8rem; }
+.contact-page .contact-feature-icon { width: 3rem; height: 3rem; }
+.contact-page .contact-feature-icon svg { width: 1.45rem; height: 1.45rem; }
+.contact-page .contact-feature-strip strong { font-size: 0.95rem; }
+.contact-page .contact-feature-strip small { font-size: 0.84rem; line-height: 1.5; }
+
+/* Servicios reuses the same four-step rental flow as Inicio. */
+.services-process .services-section__heading .home-wave {
+  margin: 0.65rem auto 0;
+}
+
+.services-process .services-process__grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.services-process .services-section__heading h2 {
+  font-size: clamp(2rem, 2.7vw, 2.4rem);
+  text-transform: none;
+}
+
+.services-process .home-process-card span {
+  background: var(--brand-yellow);
+  color: #061e42;
+}
+
+.services-process .home-process-card::after {
+  z-index: 2;
+  width: 1.7rem;
+  border-top: 2px dashed var(--brand-yellow);
+}
+
+.services-process .home-process-card p {
+  color: #061e42;
 }
 
 #eventos-nosotros {

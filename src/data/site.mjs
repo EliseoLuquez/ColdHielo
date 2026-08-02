@@ -1,6 +1,7 @@
 export const site = {
   name: "Cold Hielo",
   phoneDisplay: "11 3300-2956",
+  phoneTel: "tel:+541133002956",
   phoneUrl: "https://wa.me/541133002956",
   rentalUrl: "https://wa.me/541133002956?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%0A%0ANombre%20o%20empresa%3A%0AEquipo%20y%20cantidad%3A%0AFecha%20desde%2Fhasta%3A%0ADirecci%C3%B3n%20exacta%20y%20localidad%3A%0A%C2%BFNecesito%20hielo%3F%3A",
   iceUrl: "https://wa.me/541133002956?text=Hola%2C%20quiero%20consultar%20por%20compra%20de%20hielo.",
@@ -8,9 +9,15 @@ export const site = {
   facebookUrl: "https://www.facebook.com/coldfreezers",
   address: "Prudan 119, Ramos Mejía - Buenos Aires",
   mapUrl: "https://www.google.com/maps/search/?api=1&query=Prudan+119%2C+Ramos+Mej%C3%ADa%2C+Buenos+Aires",
-  administrationHours: "Lun a Sáb de 9 a 18 hs",
-  deliveryHours: "Lunes a sábados",
-  pickupHours: "8 a 14 y 17 a 22 hs (Lun a Sáb)"
+  mapEmbedUrl: "https://www.google.com/maps?q=Prudan+119,+Ramos+Mej%C3%ADa,+Buenos+Aires,+Argentina&output=embed",
+  coverageIntro: "Realizamos entregas coordinadas en CABA y distintas zonas de Gran Buenos Aires.",
+  coverageNote: "La disponibilidad y el costo de envío se confirman según la zona, la fecha y el volumen del pedido.",
+  contactHours: {
+    administration: "A confirmar",
+    pickup: "A confirmar",
+    delivery: "A confirmar",
+    sunday: "A confirmar"
+  }
 };
 
 export const navigation = [

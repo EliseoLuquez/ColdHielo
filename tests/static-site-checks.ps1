@@ -124,7 +124,7 @@ Assert-Contains $servicios "img/catalogo-tachos-hielo-500.jpg" "service ice barr
 Assert-Contains $servicios "Tachos para hielo 500 lts" "service ice barrel copy"
 
 Assert-Contains $productos $iceQuery "product ice WhatsApp query"
-Assert-Contains $productos $rentalQuery "product shared quote CTA WhatsApp query"
+Assert-Contains $productos $iceQuery "product shared quote CTA WhatsApp query"
 
 Assert-Contains $nosotros "equipos de fr${acuteI}o" "about accented cold-equipment copy"
 Assert-Contains $nosotros "costo de env${acuteI}o" "about delivery-availability copy"
