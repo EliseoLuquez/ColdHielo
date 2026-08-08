@@ -2900,6 +2900,14 @@
   background-size: contain;
 }
 
+/* Generated icon set: each asset is centrally cropped to the same circular badge. */
+img[src^="img/icons/"] {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
 .products-hero {
   position: relative;
   width: 100%;
