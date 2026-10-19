@@ -22,15 +22,3 @@ if (toggle && menu) {
   });
   window.matchMedia('(min-width: 992px)').addEventListener('change', () => setOpen(false));
 }
-
-const pauseLogos = document.querySelector('.clientes-pausa');
-const logos = document.querySelector('.slide-track');
-if (pauseLogos && logos) {
-  pauseLogos.hidden = false;
-  pauseLogos.addEventListener('click', () => {
-    const paused = pauseLogos.getAttribute('aria-pressed') !== 'true';
-    logos.classList.toggle('is-paused', paused);
-    pauseLogos.setAttribute('aria-pressed', String(paused));
-    pauseLogos.textContent = paused ? 'Reanudar logos' : 'Pausar logos';
-  });
-}

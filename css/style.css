@@ -1117,7 +1117,7 @@ footer {
   #cta-contacto-final {
     padding: 2rem 1rem;
   }
-  
+
     #cta-nosotros-final {
     padding: 2rem 1rem;
   }
@@ -1239,7 +1239,6 @@ a:focus-visible, button:focus-visible { outline: 3px solid #08264d; outline-offs
 main:focus { outline: none; }
 .btn-outline-info { --bs-btn-color: #087c8f; --bs-btn-border-color: #087c8f; --bs-btn-hover-color: #fff; --bs-btn-hover-bg: #087c8f; --bs-btn-hover-border-color: #087c8f; --bs-btn-active-bg: #087c8f; --bs-btn-active-border-color: #087c8f; --bs-btn-active-color: #fff; }
 .nav-links { display: inline-block; padding: .5rem 1rem; }
-.slide-track:hover, .slide-track:focus-within { animation-play-state: paused; }
 @media (max-width: 991.98px) {
   .logo-header img { width: 96px; }
   .main-nav ul { max-height: calc(100dvh - 120px); overflow-y: auto; }
@@ -1250,13 +1249,9 @@ main:focus { outline: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-  .slide-track { width: 100%; }
-  .clientes-grupo { width: 100%; flex-wrap: wrap; justify-content: center; }
-  .clientes-grupo[aria-hidden="true"] { display: none; }
+  .slide-track { animation: clientes-scroll 60s linear infinite !important; }
 }
 
 @media (max-width: 991.98px) {
   .producto-hero, .servicio-hero, .banner-comercio, .banner-hielo { padding: 0; }
 }
-
-.slide-track.is-paused { animation-play-state: paused; }
