@@ -1,11 +1,11 @@
-$ErrorActionPreference = "Stop"
+﻿$ErrorActionPreference = "Stop"
 
 $workflowPath = ".github/workflows/deploy-pages.yml"
 if (Test-Path -LiteralPath $workflowPath) {
   $workflow = Get-Content -Raw -Encoding UTF8 -LiteralPath $workflowPath
   $requiredContent = @(
     "push:",
-    "branches: [main]",
+    "branches: [codex/frontend-redesign-pages]",
     "workflow_dispatch:",
     "actions/checkout@v4",
     "actions/setup-node@v4",

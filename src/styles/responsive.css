@@ -1114,9 +1114,8 @@ header .pt-4 {
     animation: none !important;
   }
 
-  .slide-track {
-    animation: none;
-    transform: none;
+  .home-logo-slider .slide-track {
+    animation: scroll 60s linear infinite !important;
   }
 }
 
@@ -2931,5 +2930,40 @@ header .pt-4 {
 @media (max-width: 767.98px) {
   .services-process .services-process__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Matching logo slots and equal repeat widths keep the loop seamless. */
+.home-logo-slider .slide-track {
+  display: flex;
+  width: max-content;
+  min-width: max-content;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: .35rem 0;
+  animation: scroll 30s linear infinite;
+}
+.home-logo-slider .slide-track img {
+  box-sizing: border-box;
+  flex: 0 0 10rem;
+  width: 10rem;
+  height: 6rem;
+  max-height: none;
+  margin-inline: .75rem;
+  padding: .75rem;
+  object-fit: contain;
+  opacity: 1;
+}
+.home-logo-slider .slide-track img[src$="logo-cliente-lollapalooza.png"] {
+  background: #08264d;
+}
+@media (max-width: 767.98px) {
+  .home-logo-slider .slide-track img {
+    flex-basis: 8.5rem;
+    width: 8.5rem;
+    height: 5.25rem;
+    margin-inline: .5rem;
+    padding: .65rem;
   }
 }

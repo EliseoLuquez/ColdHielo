@@ -4624,8 +4624,3 @@ footer .footer-list a:focus-visible {
   height: 4rem;
   padding: 0.45rem 0.8rem;
 }
-
-.home-logo-slider:hover .slide-track,
-.home-logo-slider:focus-within .slide-track {
-  animation-play-state: paused;
-}

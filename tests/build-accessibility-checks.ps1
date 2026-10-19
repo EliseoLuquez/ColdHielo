@@ -1,4 +1,4 @@
-$ErrorActionPreference = "Stop"
+﻿$ErrorActionPreference = "Stop"
 $siteRoot = if ($env:SITE_ROOT) { $env:SITE_ROOT } else { "dist" }
 $sourceRoot = Split-Path -Parent $PSScriptRoot
 $pages = @("index.html", "servicios.html", "productos.html", "nosotros.html", "contacto.html")
@@ -173,7 +173,7 @@ $cssFeatures = @(
   @{ Pattern = '\.banner-nosotros-texto(?:\s*,[^{}]+)*\s*\{[^}]*max-width\s*:'; Label = 'readable hero measure' },
   @{ Pattern = '@media\s*\(prefers-reduced-motion\s*:\s*reduce\)[\s\S]*?\*\s*,\s*\*:{1,2}before\s*,\s*\*:{1,2}after\s*\{[^}]*scroll-behavior\s*:\s*auto'; Label = 'reduced-motion scroll override' }
   @{ Pattern = '@media\s*\(prefers-reduced-motion\s*:\s*reduce\)[\s\S]*?transition-duration\s*:\s*(?:0)?\.01ms'; Label = 'reduced transition motion' }
-  @{ Pattern = '@media\s*\(prefers-reduced-motion\s*:\s*reduce\)[\s\S]*?\.slide-track\s*\{[^}]*animation\s*:\s*none'; Label = 'reduced-motion carousel override' }
+  @{ Pattern = '@media\s*\(prefers-reduced-motion\s*:\s*reduce\)[\s\S]*?.slide-track\s*\{[^}]*animation\s*:\s*scroll\s+60s\s+linear\s+infinite'; Label = 'slower automatic carousel for reduced motion' }
 )
 
 foreach ($feature in $cssFeatures) {

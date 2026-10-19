@@ -37,7 +37,7 @@ La version de produccion se genera en `dist/`. `npm test` compila el sitio y ver
 
 ## Publicacion
 
-Cada push a `main` ejecuta `.github/workflows/deploy-pages.yml`, valida el sitio y publica `dist/`.
+Cada push a `codex/frontend-redesign-pages` ejecuta `.github/workflows/deploy-pages.yml`, valida el sitio y publica `dist/`.
 
 En GitHub, la fuente de Pages debe configurarse una sola vez en:
 
@@ -57,3 +57,5 @@ Cold Hielo
 Prudan 119, Ramos Mejia
 
 WhatsApp: [11 3300-2956](https://wa.me/541133002956)
+
+La fuente del sitio es `codex/frontend-redesign-pages`. GitHub Pages publica exclusivamente el artefacto compilado `dist/` de esa rama mediante GitHub Actions. La rama `gh-pages` queda como historial de publicaciones anteriores.
