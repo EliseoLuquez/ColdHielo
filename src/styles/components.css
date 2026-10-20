@@ -4624,3 +4624,21 @@ footer .footer-list a:focus-visible {
   height: 4rem;
   padding: 0.45rem 0.8rem;
 }
+
+/* One crisp, readable WhatsApp mark for every inquiry button. */
+a:is(.btn, .home-btn, .site-quote-cta__button)[href*="wa.me"]::before {
+  content: "";
+  display: inline-block;
+  flex: 0 0 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: currentColor;
+  mask: url("/img/ui/whatsapp.svg") center / contain no-repeat;
+  -webkit-mask: url("/img/ui/whatsapp.svg") center / contain no-repeat;
+}
+a:is(.btn, .home-btn, .site-quote-cta__button)[href*="wa.me"] {
+  gap: .65rem;
+  min-height: 48px;
+  line-height: 1.35;
+  white-space: normal;
+}

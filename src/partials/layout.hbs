@@ -12,7 +12,7 @@
       <nav class="bottom-mobile-nav" aria-label="Navegación rápida">
           {{#each navigation}}
             <a href="{{href}}"{{#if (isCurrent id ../page.id)}} class="active" aria-current="page"{{/if}}>
-              <img src="img/nav/{{mobileIcon}}.png" alt="" width="96" height="96" aria-hidden="true">
+              {{> nav-icon icon=mobileIcon}}
               <span>{{label}}</span>
             </a>
           {{/each}}

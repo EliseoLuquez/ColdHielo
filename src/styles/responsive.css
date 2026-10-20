@@ -2967,3 +2967,54 @@ header .pt-4 {
     padding: .65rem;
   }
 }
+
+/* Mobile navigation uses the same icon family and a visible current-page pill. */
+@media (max-width: 767.98px) {
+  :root { --mobile-nav-height: 76px; }
+  html { scroll-padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom) + 20px); }
+  body { padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom) + 16px); }
+  .bottom-mobile-nav {
+    min-height: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom));
+    padding: 8px max(6px, env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(6px, env(safe-area-inset-left));
+    gap: 4px;
+    background: #ffdb42;
+    border-top: 1px solid rgb(8 38 77 / 15%);
+    box-shadow: 0 -4px 18px rgb(8 38 77 / 10%);
+  }
+  .bottom-mobile-nav a {
+    position: relative;
+    min-height: 56px;
+    padding: 6px 2px;
+    gap: 5px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    color: #08264d;
+  }
+  .bottom-mobile-nav svg { width: 24px; height: 24px; flex: 0 0 24px; fill: currentColor; }
+  .bottom-mobile-nav span { font-size: .7rem; line-height: 1.2; font-weight: 700; }
+  .bottom-mobile-nav a.active {
+    color: #08264d;
+    background: #fff;
+    border-color: rgb(8 38 77 / 18%);
+    box-shadow: 0 2px 5px rgb(8 38 77 / 8%);
+  }
+  .bottom-mobile-nav a.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    height: 3px;
+    border-radius: 0 0 3px 3px;
+    background: #08264d;
+  }
+  .bottom-mobile-nav a:focus-visible { outline: 3px solid #08264d; outline-offset: -3px; }
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    right: max(12px, env(safe-area-inset-right));
+    bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom) + 14px);
+  }
+  .whatsapp-float img { width: 48px; height: 48px; }
+  .site-quote-cta__button { min-width: 0; max-width: 100%; text-align: center; }
+}
