@@ -13,10 +13,10 @@ export const site = {
   coverageIntro: "Realizamos entregas coordinadas en CABA y distintas zonas de Gran Buenos Aires.",
   coverageNote: "La disponibilidad y el costo de envío se confirman según la zona, la fecha y el volumen del pedido.",
   contactHours: {
-    administration: "A confirmar",
-    pickup: "A confirmar",
-    delivery: "A confirmar",
-    sunday: "A confirmar"
+    administration: "9:00 a 18:00 hs",
+    pickup: "8:00 a 00:00 hs",
+    delivery: "9:00 a 18:00 hs",
+    sunday: "9:00 a 15:00 hs"
   }
 };
 
