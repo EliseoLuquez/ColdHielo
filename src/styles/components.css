@@ -314,7 +314,7 @@
 
 .home-hero__inner {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   gap: clamp(1rem, 3vw, 2.5rem);

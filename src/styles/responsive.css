@@ -2426,49 +2426,89 @@ header .pt-4 {
   }
 }
 
-/* Keep the home hero aligned with the services hero composition. */
+/* Match the full-width image and overlaid copy used in the about hero. */
 @media (min-width: 768px) {
   .home-hero {
-    min-height: 0;
-    background: #f6fcff;
+    isolation: isolate;
+    color: var(--white);
+    background: #001c34;
   }
 
   .home-hero::before {
-    content: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(90deg, rgb(0 28 52 / 96%) 0 30%, rgb(0 28 52 / 80%) 51%, rgb(0 28 52 / 22%) 100%),
+      linear-gradient(180deg, rgb(0 28 52 / 24%), rgb(0 28 52 / 12%) 55%, rgb(0 28 52 / 28%));
+    pointer-events: none;
   }
 
   .home-hero::after {
-    content: none;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    z-index: 2;
+    height: clamp(4.75rem, 8vw, 7.5rem);
+    background: var(--white);
+    clip-path: ellipse(76% 72% at 50% 100%);
+    pointer-events: none;
   }
 
   .home-hero__inner {
-    display: grid;
-    grid-template-columns: minmax(21rem, 0.82fr) minmax(0, 1.18fr);
-    gap: 0;
-    width: min(100% - 4rem, 94rem);
-    min-height: clamp(26rem, 38vw, 35rem);
+    display: flex;
+    align-items: center;
+    width: min(100% - 2rem, var(--content-max));
+    min-height: clamp(34rem, 42vw, 42rem);
     margin-inline: auto;
-    padding: clamp(1.5rem, 3vw, 3rem) 0;
+    padding: clamp(4rem, 7vw, 6.5rem) 0 clamp(6rem, 10vw, 8.5rem);
   }
 
   .home-hero__copy {
-    z-index: 1;
-    width: min(100%, 30rem);
-    max-width: 30rem;
-    padding: 0 clamp(1rem, 3vw, 3rem) 0 0;
+    width: min(100%, 38rem);
+    max-width: 38rem;
+    padding: 0;
     text-align: left;
   }
 
+  .home-hero__eyebrow {
+    color: #75ddff;
+  }
+
+  .home-hero__display-title {
+    color: var(--white);
+  }
+
+  .home-hero__display-title span {
+    display: block;
+    color: var(--home-yellow);
+  }
+
+  .home-hero__lead {
+    margin-inline: 0;
+    color: rgb(245 251 255 / 92%);
+    text-align: left;
+  }
+
+  .home-hero__actions {
+    justify-content: flex-start;
+  }
+
   .home-hero__wave {
-    margin: 0.55rem 0 1rem;
+    margin: 0.9rem 0 1.1rem;
   }
 
   .home-hero__visual {
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
     width: 100%;
     height: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: auto;
   }
 
   .home-hero__visual picture {
@@ -2479,9 +2519,17 @@ header .pt-4 {
 
   .home-hero__image {
     width: 100%;
+    max-width: none;
     height: 100%;
-    object-fit: contain;
-    object-position: left center;
+    object-fit: cover;
+    object-position: center;
+    filter: none;
+  }
+
+  .home-hero__actions .home-btn--secondary {
+    color: var(--white);
+    background: rgb(0 28 52 / 45%);
+    border-color: rgb(255 255 255 / 72%);
   }
 }
 
@@ -2624,30 +2672,6 @@ header .pt-4 {
   .home-logo-slider .slide-track {
     animation: none;
     transform: none;
-  }
-}
-
-/* Final home overrides: keep the desktop scale and the mobile composition intentional. */
-@media (min-width: 768px) {
-  .home-hero__inner {
-    grid-template-columns: minmax(25rem, 0.9fr) minmax(0, 1.1fr);
-    gap: clamp(1.5rem, 4vw, 4rem);
-    width: min(100% - 4rem, var(--content-max));
-    min-height: clamp(30rem, 42vw, 38rem);
-  }
-
-  .home-hero__copy {
-    width: min(100%, 34rem);
-    max-width: 34rem;
-    padding-right: 0;
-  }
-
-  .home-hero__visual {
-    align-self: stretch;
-  }
-
-  .home-hero__image {
-    object-position: center;
   }
 }
 
