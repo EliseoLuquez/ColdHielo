@@ -2426,12 +2426,12 @@ header .pt-4 {
   }
 }
 
-/* Match the full-width image and overlaid copy used in the about hero. */
+/* Use the about hero composition while retaining the original home palette. */
 @media (min-width: 768px) {
   .home-hero {
     isolation: isolate;
-    color: var(--white);
-    background: #001c34;
+    color: var(--home-text);
+    background: #f6fcff;
   }
 
   .home-hero::before {
@@ -2439,9 +2439,7 @@ header .pt-4 {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background:
-      linear-gradient(90deg, rgb(0 28 52 / 96%) 0 30%, rgb(0 28 52 / 80%) 51%, rgb(0 28 52 / 22%) 100%),
-      linear-gradient(180deg, rgb(0 28 52 / 24%), rgb(0 28 52 / 12%) 55%, rgb(0 28 52 / 28%));
+    background: linear-gradient(90deg, rgb(246 252 255 / 98%) 0 22%, rgb(246 252 255 / 90%) 40%, rgb(246 252 255 / 25%) 62%, rgb(246 252 255 / 0%) 80%);
     pointer-events: none;
   }
 
@@ -2475,21 +2473,21 @@ header .pt-4 {
   }
 
   .home-hero__eyebrow {
-    color: #75ddff;
+    color: var(--home-blue);
   }
 
   .home-hero__display-title {
-    color: var(--white);
+    color: var(--home-blue-dark);
   }
 
   .home-hero__display-title span {
     display: block;
-    color: var(--home-yellow);
+    color: var(--home-blue);
   }
 
   .home-hero__lead {
     margin-inline: 0;
-    color: rgb(245 251 255 / 92%);
+    color: var(--home-text);
     text-align: left;
   }
 
@@ -2524,12 +2522,6 @@ header .pt-4 {
     object-fit: cover;
     object-position: center;
     filter: none;
-  }
-
-  .home-hero__actions .home-btn--secondary {
-    color: var(--white);
-    background: rgb(0 28 52 / 45%);
-    border-color: rgb(255 255 255 / 72%);
   }
 }
 
