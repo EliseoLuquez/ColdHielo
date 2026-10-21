@@ -66,7 +66,9 @@ $acuteO = [char]0x00F3
 $cylindricalIce = "hielo cil${acuteI}ndrico"
 
 Assert-Contains $index "Alquiler de Freezers y Heladeras y Venta de Hielo | Cold Hielo" "home title"
-Assert-Contains $index "Alquiler de <span>freezers y heladeras</span></h1>" "home heading"
+$homeHeading = [regex]::Match($index, '<h1\b[^>]*>(.*?)</h1>', 'Singleline').Groups[1].Value
+$homeHeadingText = [regex]::Replace($homeHeading, '<[^>]+>', '')
+Assert-Matches $homeHeadingText '^Alquiler de freezers y heladeras$' "home heading"
 Assert-NotContains $index "Alquiler de Freezers, Heladeras y Tachos" "old home title"
 Assert-Contains $index "Del fr${acuteI}o nos encargamos nosotros" "home hero heading"
 Assert-Contains $index "C${acuteO}mo funciona el alquiler" "home accented process heading"

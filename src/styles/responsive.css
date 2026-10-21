@@ -2471,6 +2471,10 @@ header .pt-4 {
     color: var(--home-blue-dark);
   }
 
+  .home-hero .home-hero__display-title {
+    margin-bottom: 3.55rem;
+  }
+
   .home-hero__display-title span {
     display: block;
     color: var(--home-blue);
@@ -2484,10 +2488,6 @@ header .pt-4 {
 
   .home-hero__actions {
     justify-content: flex-start;
-  }
-
-  .home-hero__wave {
-    margin: 0.9rem auto 1.1rem;
   }
 
   .home-hero__visual {
@@ -2609,8 +2609,8 @@ header .pt-4 {
     color: var(--white);
   }
 
-  .home-hero__wave {
-    margin: 0 auto 1rem;
+  .home-hero .home-hero__display-title {
+    margin-bottom: 2.55rem;
   }
 
   .home-hero__actions {
@@ -2629,6 +2629,20 @@ header .pt-4 {
     position: relative;
     z-index: 5;
   }
+}
+
+/* Anchor the decoration to the final word, rather than the wider copy column. */
+.home-hero__display-title .home-hero__title-end {
+  position: relative;
+  display: inline-block;
+}
+
+.home-hero__display-title .home-hero__wave {
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%);
 }
 
 @media (prefers-reduced-motion: reduce) {
