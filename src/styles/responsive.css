@@ -2444,16 +2444,7 @@ header .pt-4 {
   }
 
   .home-hero::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -1px;
-    left: 0;
-    z-index: 2;
-    height: clamp(4.75rem, 8vw, 7.5rem);
-    background: var(--white);
-    clip-path: ellipse(76% 72% at 50% 100%);
-    pointer-events: none;
+    content: none;
   }
 
   .home-hero__inner {
@@ -2496,7 +2487,7 @@ header .pt-4 {
   }
 
   .home-hero__wave {
-    margin: 0.9rem 0 1.1rem;
+    margin: 0.9rem auto 1.1rem;
   }
 
   .home-hero__visual {
@@ -2546,17 +2537,7 @@ header .pt-4 {
   }
 
   .home-hero::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -1px;
-    left: 0;
-    z-index: 4;
-    display: block;
-    height: clamp(4.25rem, 20vw, 6.75rem);
-    background: var(--white);
-    clip-path: ellipse(110% 80% at 50% 100%);
-    pointer-events: none;
+    content: none;
   }
 
   .home-hero__inner {
@@ -2628,9 +2609,9 @@ header .pt-4 {
     color: var(--white);
   }
 
-.home-hero__wave {
-  margin: 0 auto 1rem;
-}
+  .home-hero__wave {
+    margin: 0 auto 1rem;
+  }
 
   .home-hero__actions {
     width: 100%;
