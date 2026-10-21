@@ -2372,7 +2372,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: url("/img/alquiler-freezers-heladeras-hero.png") 60% center / cover no-repeat;
+  background: none;
 }
 
 .services-hero__image {

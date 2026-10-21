@@ -110,7 +110,9 @@ Assert-NotContains $index $oldRentalQuery "old home rental WhatsApp query"
 
 Assert-Contains $servicios $rentalQuery "service rental WhatsApp query"
 Assert-Contains $servicios "Alquiler de Freezers y Heladeras | Cold Hielo" "service title"
-Assert-Contains $servicios "Alquiler de Freezers y Heladeras</h1>" "service heading"
+$serviceHeading = [regex]::Match($servicios, '<h1\b[^>]*>(.*?)</h1>', 'Singleline').Groups[1].Value
+$serviceHeadingText = [regex]::Replace($serviceHeading, '<[^>]+>', '')
+Assert-Matches $serviceHeadingText '^Alquiler de freezers y heladeras$' "service heading"
 Assert-NotContains $servicios "Alquiler de Freezers, Heladeras y Tachos" "old service title"
 Assert-Contains $servicios "img/catalogo-freezer-horizontal.jpg" "service catalog horizontal freezer image"
 Assert-Contains $servicios "Freezer horizontal 100 lts" "service horizontal 100 lts"
