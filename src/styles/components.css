@@ -1017,6 +1017,11 @@
   max-width: 32rem;
 }
 
+.about-hero__heading {
+  width: fit-content;
+  max-width: 100%;
+}
+
 .about-hero h1 {
   margin: 0;
   color: var(--about-yellow);
@@ -1032,7 +1037,7 @@
 }
 
 .about-hero .about-wave {
-  margin: 0.9rem 0 1.1rem;
+  margin: 0.9rem auto 1.1rem;
 }
 
 .about-hero p {

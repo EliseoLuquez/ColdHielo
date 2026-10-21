@@ -1970,6 +1970,10 @@ header .pt-4 {
     margin-inline: auto;
   }
 
+  .about-hero__heading {
+    margin-inline: auto;
+  }
+
   .about-hero__copy p {
     color: rgb(245 251 255 / 92%);
   }
